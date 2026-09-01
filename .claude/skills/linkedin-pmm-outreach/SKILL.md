@@ -73,6 +73,21 @@ Really appreciate your guidance—it made a noticeable difference!
 
 ---
 
+
+#### Framework 5: The "SMM Proof + Volunteer Contribution" DM (High-Leverage Value Add)
+*Goal: Showcase tangible social media execution wins and offer to take work off their plate on active projects/launches.*
+```text
+Hi [Name], thanks for connecting!
+
+I’ve been following how you lead product marketing at [Company]—the narrative clarity in your recent campaigns is incredible.
+
+On my end, my foundation is in social media management and growth marketing, where I’ve managed end-to-end campaigns—from drafting high-converting copy and visual assets to running automated content distribution workflows. Right now, I’m channeling that audience empathy and execution speed into AI Product Marketing.
+
+I know how demanding GTM launches and content repurposing can be. If you have any side projects, case studies, or distribution tasks on your desk that you need an extra pair of hands on, I’d love to volunteer my time to help you build or execute them—no strings attached.
+
+Would love to support what you’re building if an opportunity aligns!
+```
+
 ## ⚡ Output Requirements for Assistant
 Whenever drafting outreach:
 1. Provide **Option A (Story & Advice Focus)** and **Option B (Work & Feedback Focus)**.
