@@ -5,6 +5,7 @@
 - **Target Deadline:** September 2026
 
 ## Core Assets in this Project
+- **Live Google Doc:** [Adediwura Afolabi - LinkedIn Profile & Strategy Document](https://docs.google.com/document/d/13KPjh0aTrCyVx35ZrFCQU2mwDXB3_Nqq49L_bhN1kME/edit)
 - [`profile-strategy-and-copy.md`](./profile-strategy-and-copy.md) — Master file containing finalized Headline, Combined About Section, Experience bullet points, Credentials, and Featured Post blueprints.
 
 ## Finalized Master "About" Section
