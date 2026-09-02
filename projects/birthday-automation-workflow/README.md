@@ -17,7 +17,7 @@
 
 - **Workflow 02 (Daily 7PM WAT Digest & Monthly Master List):**
   - **n8n Workflow ID:** `4igs0PRJYCkWpISb` (Active & Deployed)
-  - **Branch 1 (Daily 7:00 PM WAT Digest):** Triggers daily at 19:00 WAT (18:00 UTC). Evaluates celebrants celebrating tomorrow and in the next 3 days, compiling an action-oriented digest to `adediwura.ainaafolabi@gmail.com`.
+  - **Branch 1 (Daily 7:00 PM WAT Digest):** Triggers daily at 19:00 WAT (18:00 UTC). Evaluates celebrants for tomorrow (urgent flyer action item) AND the entire upcoming week (next 7-day rolling window) with 1-click WhatsApp invite buttons, sending the action digest to `adediwura.ainaafolabi@gmail.com`.
   - **Branch 2 (Monthly Master Birthday Roster):** Triggers on the 1st of each month at 08:00 WAT (07:00 UTC). Queries `Members` tab for all members born in that month and sends a sorted chronological calendar report with 1-click WhatsApp invite links.
   - **Form Intake Polling:** Completely decommissioned per user directive to prevent unwanted notifications.
   - **Human-in-the-Loop:** Strictly sends zero outgoing WhatsApp messages automatically; all notifications route to Gmail so Adediwura can design flyers in Canva and send messages manually.
