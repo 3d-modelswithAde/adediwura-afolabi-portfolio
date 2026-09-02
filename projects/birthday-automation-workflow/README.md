@@ -15,10 +15,12 @@
   - **Master Destination:** Google Sheets `Community Birthday Database` (`Members` tab, Doc ID: `1CdcOK2JoFiUr3bn3QI7fMzLzNIEZ8_9K4j81c0aw9aE`).
   - **Active Credentials:** Google Sheets OAuth2 API (`BpVAIzcMpxcpC9OB`).
 
-- **Workflow 02 (Daily Detection & Dispatch):**
-  - Daily cron trigger at 07:00 WAT.
-  - Queries Google Sheets for today's celebrants and 3-day heads-up alerts.
-  - Dispatches notifications / queue briefs for outreach.
+- **Workflow 02 (Intake Alerts, Daily 7PM WAT Digest & Monthly Master List):**
+  - **n8n Workflow ID:** `4igs0PRJYCkWpISb` (Active & Deployed)
+  - **Branch 1 (Form Intake Alert):** Polls `Form Responses` every 15 mins for unalerted submissions, formats celebrant specs with photo download links and Lora flyer copy, and dispatches instant Gmail alerts.
+  - **Branch 2 (Daily 7:00 PM WAT Digest):** Triggers daily at 19:00 WAT (18:00 UTC). Evaluates celebrants celebrating tomorrow and in the next 3 days, compiling an action-oriented digest to `adediwura.ainaafolabi@gmail.com`.
+  - **Branch 3 (Monthly Master Birthday Roster):** Triggers on the 1st of each month at 08:00 WAT (07:00 UTC). Queries `Members` tab for all members born in that month and sends a sorted chronological calendar report.
+  - **Human-in-the-Loop:** Strictly sends zero outgoing WhatsApp messages automatically; all notifications route to Gmail so Adediwura can design flyers in Canva and send messages manually.
 
 ### 2. Assistant Skill (`birthday-message-generator`)
 - **Skill Location:** `.claude/skills/birthday-message-generator/SKILL.md` (also registered in `~/.agents/skills/`).
