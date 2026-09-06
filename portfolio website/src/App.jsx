@@ -1,14 +1,16 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { NarrativeCallout } from './components/NarrativeCallout';
+import { Philosophy } from './components/Philosophy';
+import { TechStackGrid } from './components/TechStackGrid';
 import { Capabilities } from './components/Capabilities';
+import { WhyChooseMe } from './components/WhyChooseMe';
 import { CaseStudies } from './components/CaseStudies';
 import { InteractiveSimulator } from './components/InteractiveSimulator';
 import { CareerEvolution } from './components/CareerEvolution';
 import { EngineeringMindset } from './components/EngineeringMindset';
+import { Testimonials } from './components/Testimonials';
 import { ProcessWorkflow } from './components/ProcessWorkflow';
-import { TechStackGrid } from './components/TechStackGrid';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
@@ -18,14 +20,16 @@ export function App() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <NarrativeCallout />
+        <Philosophy />
+        <TechStackGrid />
         <Capabilities />
+        <WhyChooseMe />
         <CaseStudies />
         <InteractiveSimulator />
         <CareerEvolution />
         <EngineeringMindset />
+        <Testimonials />
         <ProcessWorkflow />
-        <TechStackGrid />
         <ContactSection />
       </main>
       <Footer />

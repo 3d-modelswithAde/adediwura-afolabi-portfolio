@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cog, Wrench, Shield, Compass, Cpu, Layers } from 'lucide-react';
+import { Cog } from 'lucide-react';
 
 export const EngineeringMindset = () => {
   const engineeringStrengths = [
@@ -22,11 +22,23 @@ export const EngineeringMindset = () => {
   ];
 
   return (
-    <section id="engineering" className="py-20 bg-dark-950 border-t border-dark-800 relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="engineering" className="py-24 bg-dark-950 border-b border-dark-800/80 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="p-8 sm:p-12 rounded-3xl bg-dark-900/90 border border-dark-800 relative overflow-hidden">
-          
+        {/* Eyebrow & Title (Ken signature layout) */}
+        <div className="mb-16 max-w-2xl">
+          <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-3">
+            About Me
+          </span>
+          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-4">
+            The person behind the systems.
+          </h2>
+          <p className="text-slate-400 text-base sm:text-lg">
+            Engineering foundations, mathematical rigor, and a passion for robotics applied directly to autonomous digital architectures.
+          </p>
+        </div>
+
+        <div className="p-8 sm:p-12 rounded-3xl bg-dark-900/60 border border-dark-800/90 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Column: Context */}
@@ -34,14 +46,14 @@ export const EngineeringMindset = () => {
               <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-2">
                 Technical Foundation
               </span>
-              <h2 className="font-editorial text-3xl sm:text-4xl text-slate-100 font-normal tracking-tight mb-4">
-                The Engineering Side
-              </h2>
+              <h3 className="font-editorial text-2xl sm:text-3xl text-slate-100 font-normal tracking-tight mb-4">
+                Mechatronics & Systems Discipline
+              </h3>
               <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed mb-4">
-                As a <strong className="text-slate-100">Mechatronics Engineering student</strong>, I view digital workflows through the same lens as robotics and physical systems: inputs, sensors, deterministic logic, and fail-safe feedback loops.
+                As a <strong className="text-slate-100">Mechatronics Engineering student</strong>, I view digital workflows through the same lens as robotics and physical control systems: inputs, sensors, deterministic logic, and fail-safe feedback loops.
               </p>
               <p className="text-xs sm:text-sm text-slate-400 font-sans leading-relaxed">
-                This engineering training ensures that when I build AI automations, they don't break under real-world commercial strain.
+                This engineering training ensures that when I build AI automations, they don't hallucinate or collapse under real-world commercial strain.
               </p>
             </div>
 
@@ -50,14 +62,14 @@ export const EngineeringMindset = () => {
               {engineeringStrengths.map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-xl bg-dark-950 border border-dark-800/80 hover:border-dark-700 transition-all"
+                  className="p-5 rounded-xl bg-dark-950 border border-dark-800/80 hover:border-gold-500/30 transition-all"
                 >
                   <div className="w-8 h-8 rounded-lg bg-dark-900 border border-dark-700 flex items-center justify-center text-gold-400 mb-3">
                     <Cog className="w-4 h-4" />
                   </div>
-                  <h3 className="font-editorial text-lg text-slate-100 mb-1.5 font-medium">
+                  <h4 className="font-editorial text-lg text-slate-100 mb-1.5 font-medium">
                     {item.title}
-                  </h3>
+                  </h4>
                   <p className="text-xs text-slate-400 leading-relaxed font-sans">
                     {item.description}
                   </p>
@@ -66,7 +78,6 @@ export const EngineeringMindset = () => {
             </div>
 
           </div>
-
         </div>
 
       </div>

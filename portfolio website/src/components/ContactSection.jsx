@@ -37,7 +37,6 @@ export const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    // Construct mailto link
     const subject = encodeURIComponent(`[Project Inquiry] ${selectedService} - ${formData.company || formData.name}`);
     const body = encodeURIComponent(
       `Hi Adediwura,\n\nMy name is ${formData.name} from ${formData.company || 'my company'}.\n\nService needed: ${selectedService}\n\nOur problem / goal:\n${formData.problem}\n\nPlease reach me at: ${formData.email}`
@@ -46,48 +45,44 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-dark-900/90 border-t border-dark-800 relative">
+    <section id="contact" className="py-24 bg-dark-950 border-t border-dark-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
-          {/* Left Column: Headline & Direct Contact Details */}
+          {/* Left Column: Headline & Direct Contact Details (Ken style) */}
           <div className="lg:col-span-5">
-            <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-2">
-              Start a Conversation
+            <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-3">
+              Contact
             </span>
-            <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-6">
-              Have a Problem That Could Be Automated?
+            <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-4">
+              Let's build something real.
             </h2>
-            <p className="text-base text-slate-300 font-sans leading-relaxed mb-8">
-              Let's turn it into an intelligent system. Whether you are exploring an AI voice agent for sales, a deterministic intake pipeline, or seeking an AI Product Marketing Manager for your team, I'd love to connect.
+            <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-8">
+              Open to contracts, full-time AI roles, and ambitious automation systems. If you have an operational bottleneck worth solving, reach out.
             </p>
 
-            {/* Direct Contact Cards */}
+            {/* Direct Channels */}
             <div className="space-y-4 mb-8">
-              
-              {/* Email Card with Copy Button */}
-              <div className="p-4 rounded-xl bg-dark-950 border border-dark-800 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3 truncate">
-                  <div className="w-10 h-10 rounded-lg bg-dark-900 border border-dark-700 flex items-center justify-center text-gold-400 shrink-0">
-                    <Mail className="w-5 h-5" />
+              {/* 1-Click Copy Email */}
+              <div className="p-4 rounded-xl bg-dark-900/60 border border-dark-800 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-dark-850 border border-dark-700 flex items-center justify-center text-gold-400">
+                    <Mail className="w-4 h-4" />
                   </div>
-                  <div className="truncate">
-                    <span className="text-[10px] font-mono text-slate-400 uppercase block">Direct Email</span>
-                    <a href={`mailto:${email}`} className="text-xs sm:text-sm font-mono text-slate-200 hover:text-gold-400 transition-colors truncate block">
-                      {email}
-                    </a>
+                  <div>
+                    <span className="text-[11px] font-mono text-slate-500 uppercase block">Email</span>
+                    <span className="text-xs sm:text-sm font-medium text-slate-200">{email}</span>
                   </div>
                 </div>
                 <button
                   onClick={copyEmail}
-                  className="px-3 py-1.5 rounded-lg bg-dark-900 border border-dark-700 text-xs font-mono text-slate-300 hover:text-white hover:bg-dark-850 flex items-center gap-1.5 shrink-0 transition-all"
-                  title="Copy email to clipboard"
+                  className="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-dark-800 border border-dark-700 text-xs font-mono text-gold-400 transition-colors flex items-center gap-1.5"
                 >
                   {copied ? (
                     <>
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                      <span className="text-emerald-400">Copied</span>
+                      <span className="text-emerald-400">Copied!</span>
                     </>
                   ) : (
                     <>
@@ -98,77 +93,72 @@ export const ContactSection = () => {
                 </button>
               </div>
 
-              {/* Location Card */}
-              <div className="p-4 rounded-xl bg-dark-950 border border-dark-800 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-dark-900 border border-dark-700 flex items-center justify-center text-gold-400 shrink-0">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase block">Base & Availability</span>
-                  <span className="text-xs sm:text-sm font-mono text-slate-200">
-                    Lagos, Nigeria (WAT / UTC+1) · Open to Remote Global Roles
-                  </span>
-                </div>
-              </div>
-
-              {/* LinkedIn Connect */}
-              <div className="p-4 rounded-xl bg-dark-950 border border-dark-800 flex items-center justify-between gap-4">
+              {/* LinkedIn Link */}
+              <a
+                href="https://www.linkedin.com/in/adediwura-afolabi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-xl bg-dark-900/60 border border-dark-800 hover:border-gold-500/30 flex items-center justify-between transition-colors group"
+              >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-dark-900 border border-dark-700 flex items-center justify-center text-gold-400 shrink-0">
-                    <LinkedInIcon className="w-5 h-5" />
+                  <div className="w-9 h-9 rounded-lg bg-dark-850 border border-dark-700 flex items-center justify-center text-gold-400 group-hover:scale-105 transition-transform">
+                    <LinkedInIcon className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono text-slate-400 uppercase block">Professional Network</span>
-                    <span className="text-xs sm:text-sm font-mono text-slate-200">Adediwura Afolabi</span>
+                    <span className="text-[11px] font-mono text-slate-500 uppercase block">LinkedIn</span>
+                    <span className="text-xs sm:text-sm font-medium text-slate-200">linkedin.com/in/adediwura-afolabi</span>
                   </div>
                 </div>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3 py-1.5 rounded-lg bg-dark-900 border border-dark-700 text-xs font-mono text-slate-300 hover:text-white flex items-center gap-1.5 transition-all"
-                >
-                  <span>Connect</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
+                <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-gold-400 transition-colors" />
+              </a>
 
+              {/* Location */}
+              <div className="p-4 rounded-xl bg-dark-900/60 border border-dark-800 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-lg bg-dark-850 border border-dark-700 flex items-center justify-center text-gold-400">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-mono text-slate-500 uppercase block">Location & Timezone</span>
+                  <span className="text-xs sm:text-sm font-medium text-slate-200">Lagos, Nigeria · West Africa Time (WAT / UTC+1)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Invariant guarantee pill */}
+            <div className="p-4 rounded-xl bg-dark-900/40 border border-gold-500/20 text-xs text-slate-300 font-mono">
+              ⚡ Guaranteed response within 24 hours with an actionable systems breakdown.
             </div>
           </div>
 
-          {/* Right Column: Interactive Consultation Inquiry Form */}
+          {/* Right Column: Interactive Consultation & Scoping Form */}
           <div className="lg:col-span-7">
-            <div className="p-7 sm:p-10 rounded-3xl bg-dark-950 border border-dark-800 shadow-2xl">
-              
-              <div className="mb-6">
-                <h3 className="font-editorial text-2xl text-slate-100 font-medium mb-1">
-                  Scope an Automation or Role
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-400 font-sans">
-                  Tell me about the operational bottleneck or role you're hiring for.
-                </p>
-              </div>
+            <div className="p-8 sm:p-10 rounded-2xl bg-dark-900/70 border border-dark-800 shadow-2xl backdrop-blur-sm">
+              <h3 className="font-editorial text-2xl text-slate-100 mb-2 font-medium">
+                Scope Your Automation or Product
+              </h3>
+              <p className="text-sm text-slate-400 mb-6 font-sans">
+                Select your area of interest and tell me what operational challenge you're trying to solve.
+              </p>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Service Selection Pills */}
                 <div>
-                  <label className="text-xs font-mono text-slate-400 block mb-2 uppercase tracking-wider">
-                    Area of Interest:
+                  <label className="text-xs font-mono uppercase text-slate-400 block mb-2.5">
+                    What system are you looking to build?
                   </label>
                   <div className="flex flex-wrap gap-2">
-                    {services.map((svc) => (
+                    {services.map((srv) => (
                       <button
                         type="button"
-                        key={svc}
-                        onClick={() => setSelectedService(svc)}
-                        className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all ${
-                          selectedService === svc
-                            ? 'bg-gold-500 text-dark-950 font-bold shadow-sm'
-                            : 'bg-dark-900 text-slate-300 border border-dark-800 hover:border-dark-700'
+                        key={srv}
+                        onClick={() => setSelectedService(srv)}
+                        className={`px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all border ${
+                          selectedService === srv
+                            ? 'bg-gold-500/20 border-gold-500 text-gold-300 font-semibold'
+                            : 'bg-dark-950 border-dark-750 text-slate-400 hover:border-dark-600'
                         }`}
                       >
-                        {svc}
+                        {srv}
                       </button>
                     ))}
                   </div>
@@ -177,74 +167,72 @@ export const ContactSection = () => {
                 {/* Name & Email Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-mono text-slate-400 block mb-1">Your Name</label>
+                    <label className="text-xs font-mono uppercase text-slate-400 block mb-1.5">
+                      Your Name *
+                    </label>
                     <input
                       type="text"
                       required
+                      placeholder="e.g. Alex Morgan"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Alex Morgan"
-                      className="w-full px-4 py-2.5 rounded-xl bg-dark-900 border border-dark-800 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-gold-500 font-sans transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-800 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-gold-500 transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono text-slate-400 block mb-1">Email Address</label>
+                    <label className="text-xs font-mono uppercase text-slate-400 block mb-1.5">
+                      Your Email *
+                    </label>
                     <input
                       type="email"
                       required
+                      placeholder="alex@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="alex@company.com"
-                      className="w-full px-4 py-2.5 rounded-xl bg-dark-900 border border-dark-800 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-gold-500 font-sans transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-800 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-gold-500 transition-colors"
                     />
                   </div>
                 </div>
 
-                {/* Company */}
+                {/* Company / Brand */}
                 <div>
-                  <label className="text-xs font-mono text-slate-400 block mb-1">Company / Organization (Optional)</label>
+                  <label className="text-xs font-mono uppercase text-slate-400 block mb-1.5">
+                    Company or Organization (Optional)
+                  </label>
                   <input
                     type="text"
+                    placeholder="e.g. Acme Health or GText Homes"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    placeholder="e.g. GText Homes / Tech Agency"
-                    className="w-full px-4 py-2.5 rounded-xl bg-dark-900 border border-dark-800 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-gold-500 font-sans transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-800 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-gold-500 transition-colors"
                   />
                 </div>
 
                 {/* Problem Description */}
                 <div>
-                  <label className="text-xs font-mono text-slate-400 block mb-1">
-                    Describe the Process, Bottleneck, or Goal
+                  <label className="text-xs font-mono uppercase text-slate-400 block mb-1.5">
+                    Describe the Process or Bottleneck *
                   </label>
                   <textarea
-                    rows={4}
                     required
+                    rows={4}
+                    placeholder="e.g. We get 50 inquiries a day through WhatsApp and web forms. Our team takes 6 hours to respond, and we are losing deals outside business hours..."
                     value={formData.problem}
                     onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
-                    placeholder="e.g., We receive 50 inbound inquiries per day and our team takes 6 hours to respond. We want an automated intake or voice agent system that qualifies prospects and logs to our CRM..."
-                    className="w-full px-4 py-2.5 rounded-xl bg-dark-900 border border-dark-800 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-gold-500 font-sans transition-colors resize-none"
-                  ></textarea>
+                    className="w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-800 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-gold-500 transition-colors resize-none"
+                  />
                 </div>
 
                 {/* Submit CTA */}
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded-xl bg-gold-500 hover:bg-gold-400 text-dark-950 font-semibold text-sm flex items-center justify-center gap-2 transition-all hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] active:scale-95"
+                  className="w-full py-3.5 rounded-xl bg-slate-100 text-dark-950 font-semibold text-sm hover:bg-white transition-all hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Project Inquiry</span>
                 </button>
-
-                {submitted && (
-                  <p className="text-xs text-emerald-400 font-mono text-center mt-2">
-                    ✓ Opening your email client with preformatted message details...
-                  </p>
-                )}
-
               </form>
-
             </div>
           </div>
 

@@ -1,22 +1,22 @@
 import React from 'react';
 import { careerEvolution } from '../data/evolution';
-import { ArrowDown, CheckCircle2, Compass, Layers } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export const CareerEvolution = () => {
   return (
-    <section id="evolution" className="py-24 bg-dark-900/60 border-t border-dark-800 relative">
+    <section id="evolution" className="py-24 bg-dark-900/40 border-b border-dark-800/80 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-2">
-            The Trajectory
+        {/* Eyebrow & Title (Ken signature layout) */}
+        <div className="mb-16 max-w-2xl">
+          <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-3">
+            Experience
           </span>
           <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-4">
-            My Career Evolution
+            Where I have built things.
           </h2>
-          <p className="text-base sm:text-lg text-slate-400 font-sans leading-relaxed">
-            An intentional progression from understanding audience attention to automating complex business systems.
+          <p className="text-slate-400 text-base sm:text-lg">
+            An intentional progression from understanding audience psychology and frontline sales to orchestrating resilient, autonomous business systems.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export const CareerEvolution = () => {
               </div>
 
               {/* Content Card */}
-              <div className="p-6 sm:p-7 rounded-2xl bg-dark-950 border border-dark-800 hover:border-dark-700 transition-all shadow-xl">
+              <div className="p-6 sm:p-7 rounded-2xl bg-dark-950 border border-dark-800 hover:border-gold-500/30 transition-all shadow-xl">
                 
                 <div className="sm:hidden mb-2">
                   <span className="text-[10px] font-mono text-gold-400 uppercase tracking-widest">
@@ -58,22 +58,13 @@ export const CareerEvolution = () => {
                 </p>
 
                 {/* Key Learnings List */}
-                <div className="space-y-2 mb-5">
-                  <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">
-                    Core Capability Developed:
-                  </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 border-t border-dark-800">
                   {phase.learnings.map((learning, lIdx) => (
-                    <div key={lIdx} className="flex items-start gap-2.5 text-xs text-slate-300">
+                    <div key={lIdx} className="flex items-start gap-2 text-xs text-slate-300">
                       <CheckCircle2 className="w-3.5 h-3.5 text-gold-400 shrink-0 mt-0.5" />
                       <span>{learning}</span>
                     </div>
                   ))}
-                </div>
-
-                {/* Milestone Badge */}
-                <div className="pt-4 border-t border-dark-800 flex items-center gap-2 text-xs font-mono text-emerald-400">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  <span><strong>Milestone:</strong> {phase.milestone}</span>
                 </div>
 
               </div>
