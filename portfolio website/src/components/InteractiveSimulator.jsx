@@ -159,32 +159,32 @@ export const InteractiveSimulator = () => {
   };
 
   return (
-    <section id="simulator" className="py-24 bg-dark-950 relative border-t border-dark-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="simulator" className="py-24 lg:py-32 bg-slate-50/50 dark:bg-dark-950 relative border-t border-slate-200 dark:border-dark-800 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-2">
+          <span className="text-xs font-mono uppercase tracking-[2.5px] text-slate-400 dark:text-slate-500 block mb-2">
             Interactive System Proof
           </span>
-          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-4">
+          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-900 dark:text-slate-100 font-normal tracking-tight mb-4">
             Test My Automation Logic
           </h2>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed font-sans">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
             Don't just take my word for it. Run real test scenarios through my deterministic pipeline logic and watch how the systems respond.
           </p>
         </div>
 
         {/* Simulator Frame */}
-        <div className="max-w-5xl mx-auto bg-dark-900 rounded-3xl border border-dark-700 shadow-2xl overflow-hidden">
+        <div className="max-w-5xl mx-auto bg-white dark:bg-dark-900 rounded-3xl border border-slate-200 dark:border-dark-700 shadow-2xl overflow-hidden">
           
           {/* Top Control Bar */}
-          <div className="bg-dark-950/80 px-6 py-4 border-b border-dark-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="bg-slate-100/90 dark:bg-dark-950/80 px-6 py-4 border-b border-slate-200 dark:border-dark-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="flex gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
                 <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
-                <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-gold-500/80"></div>
               </div>
               <span className="text-xs font-mono text-slate-400 flex items-center gap-2">
                 <Terminal className="w-3.5 h-3.5 text-gold-400" />
@@ -284,7 +284,7 @@ export const InteractiveSimulator = () => {
                             st.status === 'warning' ? (
                               <AlertOctagon className="w-4 h-4 text-rose-400" />
                             ) : (
-                              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                              <CheckCircle2 className="w-4 h-4 text-gold-500 dark:text-gold-400" />
                             )
                           ) : (
                             <span className="w-4 h-4 rounded-full border border-slate-700 inline-block"></span>

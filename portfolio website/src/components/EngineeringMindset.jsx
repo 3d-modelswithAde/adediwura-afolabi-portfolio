@@ -22,37 +22,37 @@ export const EngineeringMindset = () => {
   ];
 
   return (
-    <section id="engineering" className="py-24 bg-dark-950 border-b border-dark-800/80 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="engineering" className="py-24 lg:py-32 bg-white dark:bg-dark-950 border-b border-slate-200/80 dark:border-dark-800/80 relative transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         {/* Eyebrow & Title (Ken signature layout) */}
         <div className="mb-16 max-w-2xl">
-          <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-3">
+          <span className="text-xs font-mono uppercase tracking-[2.5px] text-slate-400 dark:text-slate-500 block mb-3">
             About Me
           </span>
-          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-4">
+          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-900 dark:text-slate-100 font-normal tracking-tight mb-4">
             The person behind the systems.
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
             Engineering foundations, mathematical rigor, and a passion for robotics applied directly to autonomous digital architectures.
           </p>
         </div>
 
-        <div className="p-8 sm:p-12 rounded-3xl bg-dark-900/60 border border-dark-800/90 relative overflow-hidden">
+        <div className="p-8 sm:p-12 rounded-3xl bg-slate-50/70 dark:bg-dark-900/60 border border-slate-200 dark:border-dark-800/90 relative overflow-hidden shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Column: Context */}
             <div className="lg:col-span-5">
-              <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-2">
+              <span className="text-xs font-mono uppercase tracking-widest text-gold-600 dark:text-gold-400 block mb-2 font-semibold">
                 Technical Foundation
               </span>
-              <h3 className="font-editorial text-2xl sm:text-3xl text-slate-100 font-normal tracking-tight mb-4">
+              <h3 className="font-editorial text-2xl sm:text-3xl text-slate-900 dark:text-slate-100 font-normal tracking-tight mb-4">
                 Mechatronics & Systems Discipline
               </h3>
-              <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed mb-4">
-                As a <strong className="text-slate-100">Mechatronics Engineering student</strong>, I view digital workflows through the same lens as robotics and physical control systems: inputs, sensors, deterministic logic, and fail-safe feedback loops.
+              <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 font-sans leading-relaxed mb-4">
+                As a <strong className="text-slate-900 dark:text-slate-100">Mechatronics Engineering student</strong>, I view digital workflows through the same lens as robotics and physical control systems: inputs, sensors, deterministic logic, and fail-safe feedback loops.
               </p>
-              <p className="text-xs sm:text-sm text-slate-400 font-sans leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
                 This engineering training ensures that when I build AI automations, they don't hallucinate or collapse under real-world commercial strain.
               </p>
             </div>
@@ -62,15 +62,15 @@ export const EngineeringMindset = () => {
               {engineeringStrengths.map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-xl bg-dark-950 border border-dark-800/80 hover:border-gold-500/30 transition-all"
+                  className="p-5 rounded-xl bg-white dark:bg-dark-950 border border-slate-200 dark:border-dark-800/80 hover:border-gold-500/30 transition-all shadow-sm"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-dark-900 border border-dark-700 flex items-center justify-center text-gold-400 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-dark-900 border border-slate-200 dark:border-dark-700 flex items-center justify-center text-gold-600 dark:text-gold-400 mb-3 shadow-sm">
                     <Cog className="w-4 h-4" />
                   </div>
-                  <h4 className="font-editorial text-lg text-slate-100 mb-1.5 font-medium">
+                  <h4 className="font-editorial text-lg text-slate-900 dark:text-slate-100 mb-1.5 font-medium">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
                     {item.description}
                   </p>
                 </div>

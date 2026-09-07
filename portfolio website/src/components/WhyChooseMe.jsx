@@ -42,18 +42,18 @@ export const WhyChooseMe = () => {
   ];
 
   return (
-    <section id="why-me" className="py-24 bg-dark-950 relative border-b border-dark-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="why-me" className="py-24 lg:py-32 bg-slate-50/50 dark:bg-dark-950 relative border-b border-slate-200/80 dark:border-dark-800/80 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         {/* Eyebrow & Title (Ken signature layout) */}
         <div className="mb-16 max-w-2xl">
-          <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-3">
+          <span className="text-xs font-mono uppercase tracking-[2.5px] text-slate-400 dark:text-slate-500 block mb-3">
             Why Work With Me
           </span>
-          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-4">
+          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-900 dark:text-slate-100 font-normal tracking-tight mb-4">
             Why they keep coming back.
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
             Not empty promises. Patterns forged across multiple real-world deployments, commercial acquisitions, and production systems.
           </p>
         </div>
@@ -65,21 +65,21 @@ export const WhyChooseMe = () => {
             return (
               <div
                 key={item.number}
-                className="p-7 rounded-2xl bg-dark-900/60 border border-dark-800/90 hover:border-gold-500/30 transition-all group flex flex-col justify-between"
+                className="p-7 rounded-2xl bg-white dark:bg-dark-900/60 border border-slate-200 dark:border-dark-800/90 hover:border-gold-500/30 transition-all group flex flex-col justify-between shadow-sm hover:shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-2xl font-bold text-slate-600 group-hover:text-gold-400 transition-colors">
+                    <span className="font-mono text-2xl font-bold text-slate-400 dark:text-slate-600 group-hover:text-gold-500 dark:group-hover:text-gold-400 transition-colors">
                       {item.number}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-dark-850 border border-dark-700 flex items-center justify-center text-slate-400 group-hover:text-gold-400 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-dark-850 border border-slate-200 dark:border-dark-700 flex items-center justify-center text-slate-500 dark:text-slate-400 group-hover:text-gold-500 dark:group-hover:text-gold-400 transition-colors shadow-sm">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
-                  <h3 className="font-editorial text-xl text-slate-100 mb-3 group-hover:text-gold-300 transition-colors">
+                  <h3 className="font-editorial text-xl text-slate-900 dark:text-slate-100 mb-3 group-hover:text-gold-600 dark:group-hover:text-gold-300 transition-colors font-medium">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-400 leading-relaxed">
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                     {item.description}
                   </p>
                 </div>

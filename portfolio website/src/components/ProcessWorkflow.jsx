@@ -41,18 +41,18 @@ export const ProcessWorkflow = () => {
   ];
 
   return (
-    <section id="process" className="py-24 bg-dark-900/60 border-t border-dark-800 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="process" className="py-24 lg:py-32 bg-slate-50/50 dark:bg-dark-900/60 border-t border-slate-200/80 dark:border-dark-800 relative transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-2">
+          <span className="text-xs font-mono uppercase tracking-[2.5px] text-slate-400 dark:text-slate-500 block mb-2">
             Methodology
           </span>
-          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-4">
+          <h2 className="font-editorial text-3xl sm:text-5xl text-slate-900 dark:text-slate-100 font-normal tracking-tight mb-4">
             How I Work
           </h2>
-          <p className="text-base sm:text-lg text-slate-400 font-sans leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-sans leading-relaxed">
             A disciplined 5-step engineering framework to turn operational headaches into resilient, automated assets.
           </p>
         </div>
@@ -64,22 +64,22 @@ export const ProcessWorkflow = () => {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-dark-950 border border-dark-800 hover:border-gold-500/40 transition-all flex flex-col justify-between group"
+                className="p-6 rounded-2xl bg-white dark:bg-dark-950 border border-slate-200 dark:border-dark-800 hover:border-gold-500/40 transition-all flex flex-col justify-between group shadow-sm hover:shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-bold text-gold-400 bg-dark-900 px-2 py-1 rounded border border-dark-700">
+                    <span className="text-xs font-mono font-bold text-gold-600 dark:text-gold-400 bg-slate-100 dark:bg-dark-900 px-2.5 py-1 rounded border border-slate-200 dark:border-dark-700 shadow-sm">
                       {item.step}
                     </span>
-                    <Icon className="w-5 h-5 text-slate-500 group-hover:text-gold-400 transition-colors" />
+                    <Icon className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-gold-500 dark:group-hover:text-gold-400 transition-colors" />
                   </div>
-                  <h3 className="font-editorial text-xl text-slate-100 mb-1 font-medium">
+                  <h3 className="font-editorial text-xl text-slate-900 dark:text-slate-100 mb-1 font-medium">
                     {item.title}
                   </h3>
-                  <span className="text-xs font-mono text-gold-400/90 block mb-3">
+                  <span className="text-xs font-mono text-gold-600 dark:text-gold-400/90 block mb-3 font-medium">
                     {item.action}
                   </span>
-                  <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
                     {item.desc}
                   </p>
                 </div>
@@ -89,11 +89,11 @@ export const ProcessWorkflow = () => {
         </div>
 
         {/* Philosophy Callout Quote */}
-        <div className="max-w-3xl mx-auto text-center p-6 rounded-2xl bg-dark-950 border border-dark-800">
-          <p className="font-editorial text-xl text-slate-200 italic mb-2">
+        <div className="max-w-3xl mx-auto text-center p-6 rounded-2xl bg-white dark:bg-dark-950 border border-slate-200 dark:border-dark-800 shadow-sm">
+          <p className="font-editorial text-xl text-slate-900 dark:text-slate-200 italic mb-2">
             "I don't automate for the sake of automation."
           </p>
-          <p className="text-xs sm:text-sm text-slate-400 font-sans">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-sans">
             I look for repetitive, expensive, or inefficient processes where intelligent systems can create meaningful business value.
           </p>
         </div>
