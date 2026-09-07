@@ -19,9 +19,8 @@ export const Navbar = ({ theme, toggleTheme }) => {
     { name: 'Capabilities', href: '#capabilities' },
     { name: 'Why Me', href: '#why-me' },
     { name: 'Systems', href: '#projects' },
-    { name: 'Simulator', href: '#simulator' },
     { name: 'Experience', href: '#evolution' },
-    { name: 'About', href: '#engineering' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -55,7 +54,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500 dark:bg-gold-400"></span>
             </span>
-            Available for work
+            Available to work globally
           </div>
 
           {/* Desktop Nav Links */}
@@ -115,7 +114,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500 dark:bg-gold-400"></span>
             </span>
-            Available for work
+            Available to work globally
           </div>
 
           <div className="flex flex-col space-y-3 pt-2">

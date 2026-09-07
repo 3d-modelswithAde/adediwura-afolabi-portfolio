@@ -94,7 +94,7 @@ export const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500 dark:bg-gold-400"></span>
               </span>
-              <span>Available for AI Systems, Automation & Voice Engineering</span>
+              <span>Available to work globally</span>
             </div>
 
             {/* Giant Editorial Headline */}
@@ -184,7 +184,7 @@ export const Hero = () => {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-gold-400"></span>
                   </span>
-                  Available for client & full-time roles
+                  Available to work globally
                 </div>
               </div>
             </div>
