@@ -45,44 +45,44 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-dark-950 border-t border-dark-800/80 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 lg:py-32 bg-white dark:bg-dark-950 border-t border-slate-200/80 dark:border-dark-800/80 relative transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           {/* Left Column: Headline & Direct Contact Details (Ken style) */}
           <div className="lg:col-span-5">
-            <span className="text-xs font-mono uppercase tracking-widest text-gold-400 block mb-3">
+            <span className="text-xs font-mono uppercase tracking-[2.5px] text-slate-400 dark:text-slate-500 block mb-3">
               Contact
             </span>
-            <h2 className="font-editorial text-3xl sm:text-5xl text-slate-100 font-normal tracking-tight mb-4">
+            <h2 className="font-editorial text-3xl sm:text-5xl text-slate-900 dark:text-slate-100 font-normal tracking-tight mb-4">
               Let's build something real.
             </h2>
-            <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-8">
+            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed mb-8">
               Open to contracts, full-time AI roles, and ambitious automation systems. If you have an operational bottleneck worth solving, reach out.
             </p>
 
             {/* Direct Channels */}
-            <div className="space-y-4 mb-8">
-              {/* 1-Click Copy Email */}
-              <div className="p-4 rounded-xl bg-dark-900/60 border border-dark-800 flex items-center justify-between">
+            <div className="space-y-3 mb-10">
+              {/* Direct Email with Copy Action */}
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-dark-900 border border-slate-200 dark:border-dark-800 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-dark-850 border border-dark-700 flex items-center justify-center text-gold-400">
+                  <div className="w-9 h-9 rounded-lg bg-white dark:bg-dark-950 border border-slate-200 dark:border-dark-700 flex items-center justify-center text-gold-500 dark:text-gold-400 shrink-0 shadow-sm">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono text-slate-500 uppercase block">Email</span>
-                    <span className="text-xs sm:text-sm font-medium text-slate-200">{email}</span>
+                    <span className="text-[11px] font-mono uppercase text-slate-400 dark:text-slate-500 block">Email Address</span>
+                    <span className="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200">{email}</span>
                   </div>
                 </div>
                 <button
                   onClick={copyEmail}
-                  className="px-3 py-1.5 rounded-lg bg-dark-850 hover:bg-dark-800 border border-dark-700 text-xs font-mono text-gold-400 transition-colors flex items-center gap-1.5"
+                  className="px-3 py-1.5 rounded-lg bg-white dark:bg-dark-850 hover:bg-slate-100 dark:hover:bg-dark-800 border border-slate-200 dark:border-dark-700 text-xs font-mono text-gold-600 dark:text-gold-400 transition-colors flex items-center gap-1.5 shadow-sm"
                 >
                   {copied ? (
                     <>
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                      <span className="text-emerald-400">Copied!</span>
+                      <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 dark:text-gold-400" />
+                      <span className="text-gold-600 dark:text-gold-400">Copied!</span>
                     </>
                   ) : (
                     <>
