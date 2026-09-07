@@ -6,11 +6,8 @@ import { TechStackGrid } from './components/TechStackGrid';
 import { Capabilities } from './components/Capabilities';
 import { WhyChooseMe } from './components/WhyChooseMe';
 import { CaseStudies } from './components/CaseStudies';
-import { InteractiveSimulator } from './components/InteractiveSimulator';
 import { CareerEvolution } from './components/CareerEvolution';
-import { EngineeringMindset } from './components/EngineeringMindset';
 import { Testimonials } from './components/Testimonials';
-import { ProcessWorkflow } from './components/ProcessWorkflow';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
@@ -43,11 +40,8 @@ export function App() {
         <Capabilities />
         <WhyChooseMe />
         <CaseStudies />
-        <InteractiveSimulator />
         <CareerEvolution />
-        <EngineeringMindset />
         <Testimonials />
-        <ProcessWorkflow />
         <ContactSection />
       </main>
       <Footer />
