@@ -11,11 +11,11 @@ const SKILLS = [
   'Product Market Fit'
 ];
 
-export const SkillsMarquee = () => {
-  // Duplicating the array (8 sets) to ensure a smooth, seamless infinite track on any viewport
+export const SkillsMarquee = ({ className = '' }) => {
+  // Duplicating the skills array 6 times (48 items)
+  // translateX(0) -> translateX(-50%) shifts by exactly half (24 items = 3 full sets)
+  // Loops with 100% mathematical seamlessness matching oyedokunken.vercel.app
   const marqueeItems = [
-    ...SKILLS,
-    ...SKILLS,
     ...SKILLS,
     ...SKILLS,
     ...SKILLS,
@@ -25,10 +25,10 @@ export const SkillsMarquee = () => {
   ];
 
   return (
-    <div className="py-7 border-y border-slate-200/80 dark:border-white/[0.08] overflow-hidden bg-slate-50/70 dark:bg-dark-900/50 relative select-none transition-colors duration-300">
+    <div className={`py-5 sm:py-6 border-y border-slate-200/80 dark:border-white/[0.08] overflow-hidden bg-slate-50/70 dark:bg-dark-900/50 relative select-none transition-colors duration-300 ${className}`}>
       {/* Edge gradient fade masks */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-20 bg-gradient-to-r from-white dark:from-dark-950 to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-20 bg-gradient-to-l from-white dark:from-dark-950 to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-20 bg-gradient-to-r from-slate-100/90 dark:from-dark-900/90 to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-20 bg-gradient-to-l from-slate-100/90 dark:from-dark-900/90 to-transparent z-10" />
 
       {/* Seamless infinite marquee ticker matching oyedokunken.vercel.app */}
       <div className="flex whitespace-nowrap animate-marquee will-change-transform">

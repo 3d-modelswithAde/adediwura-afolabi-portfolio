@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { SkillsMarquee } from './components/SkillsMarquee';
 import { Philosophy } from './components/Philosophy';
 import { TechStackGrid } from './components/TechStackGrid';
 import { Capabilities } from './components/Capabilities';
@@ -33,13 +32,16 @@ export function App() {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
+  const handleLoaderComplete = useCallback(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-dark-950 dark:text-slate-100 flex flex-col font-sans selection:bg-gold-500/20 selection:text-gold-600 dark:selection:text-gold-400 transition-colors duration-300">
-      {loading && <Loader onComplete={() => setLoading(false)} />}
+      {loading && <Loader onComplete={handleLoaderComplete} />}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="flex-grow">
         <Hero />
-        <SkillsMarquee />
         <Philosophy />
         <TechStackGrid />
         <Capabilities />
