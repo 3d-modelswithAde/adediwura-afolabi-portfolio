@@ -12,8 +12,17 @@ const SKILLS = [
 ];
 
 export const SkillsMarquee = () => {
-  // Duplicating the array to create a seamless infinite track
-  const marqueeItems = [...SKILLS, ...SKILLS, ...SKILLS, ...SKILLS];
+  // Duplicating the array (8 sets) to ensure a smooth, seamless infinite track on any viewport
+  const marqueeItems = [
+    ...SKILLS,
+    ...SKILLS,
+    ...SKILLS,
+    ...SKILLS,
+    ...SKILLS,
+    ...SKILLS,
+    ...SKILLS,
+    ...SKILLS
+  ];
 
   return (
     <div className="py-6 sm:py-7 border-y border-slate-200/80 dark:border-dark-800/80 overflow-hidden bg-slate-50/70 dark:bg-dark-900/50 relative backdrop-blur-sm select-none transition-colors duration-300">
