@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, ArrowUpRight, Cpu, Bot, Workflow, CheckCircle2, MessageSquare, Terminal } from 'lucide-react';
+import { SkillsMarquee } from './SkillsMarquee';
 
 export const Hero = () => {
   const [activeWorkflowStage, setActiveWorkflowStage] = useState(1);
@@ -55,24 +56,6 @@ export const Hero = () => {
       technicalSpec: '📈 Real-Time Telemetry ⇄ Multi-Touch Conversion Tracking ⇄ 25-Column Audit Trails',
       businessImpact: 'Accelerated deal closing, protected customer goodwill, and scalable operations.'
     }
-  ];
-
-  const marqueeTechnologies = [
-    'n8n Orchestration',
-    'ElevenLabs Voice AI',
-    'Twilio Telephony',
-    'OpenAI & Claude LLMs',
-    'HubSpot CRM API',
-    'GTM Positioning',
-    'Python',
-    'Google Workspace API',
-    'Telegram Bot API',
-    'React 19',
-    'Tailwind CSS',
-    'SolidWorks CAD',
-    'MATLAB',
-    'Product-Market Fit Loops',
-    'Deterministic State Machines'
   ];
 
   return (
@@ -195,16 +178,9 @@ export const Hero = () => {
 
         </div>
 
-        {/* Infinite Tech Marquee Ribbon (Full-Width Ticker) */}
-        <div className="mb-20 overflow-hidden relative py-4 border-y border-slate-200/80 dark:border-dark-800/80 bg-slate-100/50 dark:bg-dark-900/40 rounded-xl">
-          <div className="flex gap-8 whitespace-nowrap animate-[marquee_30s_linear_infinite]">
-            {[...marqueeTechnologies, ...marqueeTechnologies].map((tech, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-400">
-                <span className="w-1.5 h-1.5 rounded-full bg-gold-500/80 dark:bg-gold-400/60"></span>
-                <span>{tech}</span>
-              </div>
-            ))}
-          </div>
+        {/* Animated Skills Marquee (Right after 3 Stat Highlights) */}
+        <div className="mb-16 lg:mb-20">
+          <SkillsMarquee className="rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-sm" />
         </div>
 
         {/* Interactive 5-Stage System Flow Inspector (Full Max-W-7xl Layout) */}
