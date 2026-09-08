@@ -3,12 +3,7 @@ import { projects } from '../data/projects';
 import { 
   AlertTriangle, 
   ShieldCheck, 
-  TrendingUp, 
-  Maximize2, 
-  Minimize2,
-  ArrowUpRight,
-  Workflow,
-  Sparkles
+  TrendingUp 
 } from 'lucide-react';
 
 export const CaseStudies = () => {
@@ -84,17 +79,15 @@ export const CaseStudies = () => {
             return (
               <article
                 key={project.id}
-                className={`group rounded-2xl bg-white dark:bg-dark-950 border transition-all duration-300 flex flex-col overflow-hidden ${
+                onClick={() => toggleEnlarge(project.id)}
+                className={`group rounded-2xl bg-white dark:bg-dark-950 border transition-all duration-300 flex flex-col overflow-hidden cursor-pointer ${
                   isEnlarged
                     ? 'lg:col-span-2 border-gold-500/60 dark:border-gold-400/50 shadow-2xl ring-1 ring-gold-500/30'
                     : 'border-slate-200/90 dark:border-white/[0.08] shadow-sm hover:shadow-xl hover:border-gold-500/40 dark:hover:border-gold-400/30'
                 }`}
               >
-                {/* Card Top Header (Clickable to Enlarge / Minimize) */}
-                <div 
-                  onClick={() => toggleEnlarge(project.id)}
-                  className="p-6 sm:p-7 pb-5 border-b border-slate-100 dark:border-white/[0.06] bg-slate-50/50 dark:bg-dark-900/40 flex flex-col gap-3 cursor-pointer select-none"
-                >
+                {/* Card Top Header */}
+                <div className="p-6 sm:p-7 pb-5 border-b border-slate-100 dark:border-white/[0.06] bg-slate-50/50 dark:bg-dark-900/40 flex flex-col gap-3">
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-mono text-gold-600 dark:text-gold-400 uppercase tracking-wider font-semibold">
@@ -106,37 +99,9 @@ export const CaseStudies = () => {
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-2.5">
-                      <span className="px-3 py-0.5 rounded-full text-[10px] font-mono border bg-amber-50 dark:bg-gold-950/40 text-amber-800 dark:text-gold-300 border-amber-300/60 dark:border-gold-500/30 flex-shrink-0">
-                        ● {project.badge}
-                      </span>
-
-                      {/* Enlarge / Minimize Toggle Button */}
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleEnlarge(project.id);
-                        }}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono transition-all border cursor-pointer ${
-                          isEnlarged
-                            ? 'bg-gold-500 text-slate-950 font-semibold border-gold-500 shadow-sm'
-                            : 'bg-white dark:bg-dark-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:border-gold-500/50 hover:text-gold-600 dark:hover:text-gold-400'
-                        }`}
-                      >
-                        {isEnlarged ? (
-                          <>
-                            <Minimize2 className="w-3.5 h-3.5" />
-                            <span>Minimize View</span>
-                          </>
-                        ) : (
-                          <>
-                            <Maximize2 className="w-3.5 h-3.5" />
-                            <span>Fit Whole Space</span>
-                          </>
-                        )}
-                      </button>
-                    </div>
+                    <span className="px-3 py-0.5 rounded-full text-[10px] font-mono border bg-amber-50 dark:bg-gold-950/40 text-amber-800 dark:text-gold-300 border-amber-300/60 dark:border-gold-500/30 flex-shrink-0">
+                      ● {project.badge}
+                    </span>
                   </div>
 
                   <h3 className={`font-editorial text-slate-900 dark:text-slate-100 font-medium leading-snug ${
@@ -186,16 +151,6 @@ export const CaseStudies = () => {
                       <span className="text-[10px] font-mono uppercase tracking-[1.5px] text-slate-400 dark:text-slate-500 font-semibold">
                         Execution Graph ({project.architecture.length} Sequential Pipeline Stages)
                       </span>
-                      {!isEnlarged && (
-                        <button
-                          type="button"
-                          onClick={() => toggleEnlarge(project.id)}
-                          className="text-[11px] font-mono text-gold-600 dark:text-gold-400 hover:underline inline-flex items-center gap-1 cursor-pointer"
-                        >
-                          <span>Enlarge to Inspect All Stages</span>
-                          <Maximize2 className="w-3 h-3" />
-                        </button>
-                      )}
                     </div>
 
                     {/* When Enlarged: Render Full Multi-Column Sequential Stage Cards */}
@@ -269,31 +224,6 @@ export const CaseStudies = () => {
                         </p>
                       </div>
                     </div>
-
-                    {/* Bottom Action Strip for Enlarged View */}
-                    {isEnlarged && (
-                      <div className="mt-4 pt-4 border-t border-slate-100 dark:border-white/[0.06] flex items-center justify-between">
-                        <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500">
-                          Viewing full-width architectural blueprint
-                        </span>
-                        <div className="flex items-center gap-3">
-                          <button
-                            type="button"
-                            onClick={() => toggleEnlarge(project.id)}
-                            className="text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white px-3 py-1.5 rounded-lg border border-slate-200 dark:border-white/10 cursor-pointer"
-                          >
-                            Minimize to Grid
-                          </button>
-                          <a
-                            href="#contact"
-                            className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-950 font-semibold bg-gold-400 hover:bg-gold-300 px-3.5 py-1.5 rounded-lg shadow-sm"
-                          >
-                            <span>Get in Touch</span>
-                            <ArrowUpRight className="w-3.5 h-3.5" />
-                          </a>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </article>
