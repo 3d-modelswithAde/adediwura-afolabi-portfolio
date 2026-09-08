@@ -54,10 +54,7 @@ export const CaseStudies = () => {
                   key={cat}
                   onClick={() => {
                     setActiveCategory(cat);
-                    // Reset enlargement if category changes and project is hidden
-                    if (enlargedProjectId && cat !== 'All' && categoryMap[enlargedProjectId] !== cat) {
-                      setEnlargedProjectId(null);
-                    }
+                    setEnlargedProjectId(null);
                   }}
                   className={`text-[11px] tracking-[1px] uppercase px-4 py-2 rounded-full border transition-all duration-200 cursor-pointer ${
                     isCatActive
@@ -72,25 +69,28 @@ export const CaseStudies = () => {
           </div>
         </div>
 
-        {/* Responsive Project Grid with Individual Click-to-Enlarge Full Space */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 [grid-auto-flow:dense]">
+        {/* Responsive Project Grid: 4 cards on 'All', full-width single card on category selection */}
+        <div className={
+          activeCategory === 'All' && !enlargedProjectId
+            ? "grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+            : "flex flex-col gap-6 lg:gap-8 w-full"
+        }>
           {filteredProjects.map((project) => {
-            const isEnlarged = enlargedProjectId === project.id;
+            const isEnlarged = activeCategory !== 'All' || enlargedProjectId === project.id;
             return (
               <article
                 key={project.id}
                 onClick={(e) => {
                   const selection = window.getSelection();
                   if (selection && selection.toString().length > 0) return;
-                  toggleEnlarge(project.id);
+                  if (activeCategory === 'All') {
+                    toggleEnlarge(project.id);
+                  }
                 }}
-                style={{
-                  gridColumn: isEnlarged ? '1 / -1' : undefined,
-                }}
-                className={`group rounded-2xl bg-white dark:bg-dark-950 border transition-all duration-300 flex flex-col overflow-hidden cursor-pointer ${
+                className={`group rounded-2xl bg-white dark:bg-dark-950 border transition-all duration-300 flex flex-col overflow-hidden w-full ${
                   isEnlarged
-                    ? 'col-span-full md:col-span-2 lg:col-span-2 border-gold-500/60 dark:border-gold-400/50 shadow-2xl ring-1 ring-gold-500/30'
-                    : 'border-slate-200/90 dark:border-white/[0.08] shadow-sm hover:shadow-xl hover:border-gold-500/40 dark:hover:border-gold-400/30'
+                    ? 'border-gold-500/60 dark:border-gold-400/50 shadow-2xl ring-1 ring-gold-500/30'
+                    : 'border-slate-200/90 dark:border-white/[0.08] shadow-sm hover:shadow-xl hover:border-gold-500/40 dark:hover:border-gold-400/30 cursor-pointer'
                 }`}
               >
                 {/* Card Top Header */}
