@@ -5,6 +5,21 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'col-span-1',
+    'col-span-2',
+    'col-span-full',
+    'md:col-span-1',
+    'md:col-span-2',
+    'md:col-span-full',
+    'lg:col-span-1',
+    'lg:col-span-2',
+    'lg:col-span-full',
+    'grid-cols-1',
+    'md:grid-cols-2',
+    'lg:grid-cols-2',
+    'lg:grid-cols-3',
+  ],
   theme: {
     extend: {
       fontFamily: {
