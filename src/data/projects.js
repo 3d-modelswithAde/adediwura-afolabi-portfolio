@@ -1,15 +1,15 @@
 export const projects = [
   {
     id: 'intake-agent',
-    title: 'Autonomous AI Intake & Triage Agent',
+    title: 'Autonomous AI Intake & Lead Qualification Engine',
     client: 'Marcus Vance Automotive',
-    type: 'Enterprise Workflow & AI Automation',
-    badge: 'Production Architecture',
+    type: 'Enterprise GTM Workflow & AI Automation',
+    badge: 'Production GTM Architecture',
     badgeColor: 'gold',
-    heroTag: 'Zero-Hallucination Operations Pipeline',
+    heroTag: 'Zero-Hallucination GTM Operations Pipeline',
     summary: 'An autonomous multi-channel intake pipeline that intercepts inbound inquiries, generates CRM tickets before any processing, extracts vehicle/service intent, and issues quotes or isolates sensitive inquiries to human review.',
-    problem: 'Automotive service centers routinely bleed revenue when inbound inquiries from forms, emails, and calls sit in unmonitored inboxes. Manual triage causes 4-12 hour response delays, inconsistent quote pricing, missing vehicle details, and legal risks when complaints or chargeback threats go unaddressed.',
-    thinking: 'Rule #1 in business automation: Never let a customer record disappear because an AI model timed out. We established a strict "CRM Ticket First" invariant—generating the HubSpot ticket and dual tracking IDs (internal machine UUID and customer-facing TRK-XXXX) before running any AI logic. To prevent costly errors, pricing is strictly deterministic (zero hallucinations allowed on prices), and high-risk inquiries (legal threats, chargebacks) are quarantined immediately to #manual-review with all auto-replies suppressed.',
+    problem: 'Automotive centers lose high-intent leads when inquiries sit unmonitored for 4–12 hours, creating inconsistent pricing and lost revenue.',
+    thinking: '"CRM First" invariant recording the HubSpot deal and dual tracking IDs before running AI extraction, coupled with an immutable deterministic pricing engine to prevent hallucinations.',
     solution: 'Built an end-to-end deterministic pipeline in n8n connecting HubSpot CRM, Gmail, Slack, and Google Sheets with multi-layer sensitivity filtering and structured JSON parsing.',
     technologies: [
       'n8n Orchestration',
@@ -64,20 +64,20 @@ export const projects = [
         details: 'Real-time master ledger update in Google Sheets for executive transparency.'
       }
     ],
-    outcome: '8 standardized automated test suites passing (TC-01 through TC-08). Eliminates lead drop-off and cuts triage turnaround from hours to under 45 seconds.',
+    outcome: '8 standardized automated test suites passing; triage turnaround slashed from hours to under 45 seconds.',
     isProduction: true
   },
   {
     id: 'voice-agent',
     title: 'Autonomous Real Estate Voice Agent',
-    client: 'GText Homes / Luxury Real Estate',
-    type: 'Voice AI & Telephony System',
-    badge: 'Prototype & Commercial Solution',
+    client: 'Gtext Homes / Luxury Real Estate',
+    type: 'Voice AI & Conversational GTM Prototype',
+    badge: 'Prototype & Commercial GTM Solution',
     badgeColor: 'gold',
     heroTag: 'Conversational Inbound & Outbound Qualification',
     summary: 'A sub-second latency conversational voice agent designed to intercept luxury real estate inquiries 24/7, qualify buyer budget and location preferences, and record structured outcomes directly into CRM pipelines.',
-    problem: 'In luxury real estate, a 5-minute delay in responding to an inquiry reduces lead conversion probability by 391%. High-net-worth buyers and diaspora clients frequently call outside regular office hours (WAT/EST/GMT). Human sales reps cannot be on call 24/7, leading to dropped high-ticket deals.',
-    thinking: 'Buyers don\'t want robotic IVR menus ("Press 1 for Sales"). They want an intelligent, empathetic conversation that respects their time. The voice agent must sound natural, understand real estate vocabulary, ask structured qualifying questions (budget tier, investment vs. residence, preferred location), and seamlessly route qualified buyers to top human advisors with full conversation transcripts.',
+    problem: 'Diaspora buyers frequently call after hours; a 5-minute response delay drops lead conversion probability by 391%.',
+    thinking: 'Natural voice telephony (ElevenLabs + Twilio) that qualifies budget tiers, handles objections, and alerts human advisors via Telegram with full call context.',
     solution: 'Designed an integrated conversational telephony stack using ElevenLabs natural voice models, Twilio SIP trunking, n8n webhook listeners, and Google Sheets CRM sync with real-time Telegram sales rep notifications.',
     technologies: [
       'ElevenLabs Voice AI',
@@ -124,20 +124,20 @@ export const projects = [
         details: 'Advisor receives complete context before ever picking up the phone.'
       }
     ],
-    outcome: 'Eliminates after-hours lead loss. Tested and packaged as a commercial proposal for luxury property developers seeking 24/7 client responsiveness.',
+    outcome: 'Eliminates after-hours lead loss; packaged as an active commercial proposal for luxury property developers.',
     isProduction: false
   },
   {
     id: 'community-birthday',
-    title: 'Community Operations & Birthday Engine',
+    title: 'Community Operations & Engagement Engine',
     client: 'The Visionary Nation',
-    type: 'Data Normalization & Automated Operations',
+    type: 'Data Normalization & Lifecycle Operations',
     badge: 'Deployed & Active in Production',
     badgeColor: 'gold',
-    heroTag: 'Multi-Sheet Deduplication & Human-in-the-Loop Digests',
+    heroTag: 'Multi-Sheet Deduplication & Human-in-the-Loop Engagement',
     summary: 'An autonomous community management system that cleaned and deduplicated 4 disconnected spreadsheets into a normalized master database, delivering automated 7:00 PM WAT daily celebrant digests with 1-click WhatsApp links.',
-    problem: 'The Visionary Nation community was tracking members across 4 separate spreadsheets with inconsistent phone formats, duplicate entries, and scattered birthdates. Administrators spent hours each week manually checking dates, missing birthdays, and struggling to coordinate celebratory flyers.',
-    thinking: 'Automation must serve human relationships, not replace them with impersonal bot spam. Instead of spamming members with generic bot messages, the system was architected to be "Human-in-the-Loop": automate the tedious data consolidation and daily tracking, and deliver structured digests to leadership with one-click WhatsApp links and Canva flyer specifications using Lora typography.',
+    problem: 'Member tracking scattered across 4 disparate spreadsheets caused administrative friction and missed lifecycle touchpoints.',
+    thinking: 'Automated data deduplication and daily 7:00 PM WAT leadership digests with 1-click WhatsApp links and Canva Lora flyer specs for authentic human-in-the-loop engagement.',
     solution: 'Built two active n8n workflows: Workflow 01 (Import, normalize Nigerian 234 phone numbers, deduplicate across phone/name, assign MEM-XXXX IDs) and Workflow 02 (Daily 7:00 PM WAT digest alerting for tomorrow and the upcoming 7-day rolling window, plus monthly master rosters).',
     technologies: [
       'n8n (Workflow ID: 4igs0PRJYCkWpISb)',
@@ -184,20 +184,20 @@ export const projects = [
         details: 'Zero outgoing bot spam: human leadership delivers genuine personalized fellowship.'
       }
     ],
-    outcome: '100% elimination of manual date tracking; zero missed birthdays across the community; active daily production run in West Africa Time.',
+    outcome: '100% elimination of manual date tracking; zero missed milestones; active daily production run in WAT/USC.',
     isProduction: true
   },
   {
     id: 'social-media-growth',
-    title: 'Digital Growth & Social Media Track Record',
+    title: 'Digital Growth & Social Conversion Track Record',
     client: "Ovie's Kitchen & Flowery Nectar Honey",
-    type: 'Content Strategy & Revenue Generation',
+    type: 'Content Strategy & Direct Revenue Generation',
     badge: 'Documented Case Studies',
     badgeColor: 'gold',
     heroTag: 'The Foundation: Turning Attention into Business Revenue',
     summary: 'Before designing AI workflows, I mastered the frontlines of digital customer acquisition—generating 250+ online food orders for Ovie\'s Kitchen and restructuring social discovery for artisanal brands.',
-    problem: 'Building digital systems is pointless if you do not understand the human psychology of attention, trust, and conversion. Many technical builders create complex software that nobody buys because they have never operated on the frontlines of customer communication.',
-    thinking: 'My social media management career taught me how businesses attract, communicate with, and convert customers online. Every workflow I build today is rooted in real-world commercial conversion paths, not theoretical software architecture.',
+    problem: 'Technical products and marketing assets fail if the builder does not understand the frontline psychology of buyer trust and friction.',
+    thinking: 'High-volume video content combined with frictionless link-in-bio ordering funnels and keyword-targeted on-page search discovery.',
     solution: 'Designed end-to-end content calendars, produced 30 reels/month, streamlined bio link ordering funnels, and optimized on-page search discoverability.',
     technologies: [
       'Content Strategy & Direction',
@@ -237,7 +237,7 @@ export const projects = [
         details: 'Iterated weekly on top-performing video formats.'
       }
     ],
-    outcome: 'Ovie\'s Kitchen: 250+ online food orders and 2,000 accounts reached in the first 3 months of reviving inactive accounts. Flowery Nectar: Revamped page SEO that began consistently capturing direct Instagram purchase orders.',
+    outcome: 'Generated 250+ online orders in 3 months for Ovie’s Kitchen; established organic search discovery for Flowery Nectar Honey.',
     isProduction: true
   }
 ];

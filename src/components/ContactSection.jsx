@@ -9,7 +9,7 @@ const LinkedInIcon = ({ className = "w-5 h-5" }) => (
 
 export const ContactSection = () => {
   const [copied, setCopied] = useState(false);
-  const [selectedService, setSelectedService] = useState('Voice Agent');
+  const [selectedService, setSelectedService] = useState('AI Product Marketing');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,19 +27,19 @@ export const ContactSection = () => {
   };
 
   const services = [
-    'AI Voice Agent',
-    'n8n Workflow Automation',
-    'AI Intake & CRM Pipeline',
-    'AI Product Marketing (GTM)',
-    'Community Operations'
+    'AI Product Marketing',
+    'AI Voice Qualification Agent',
+    'n8n Lead & CRM Automation',
+    'Product Onboarding & Lifecycle Systems',
+    'Market Intelligence & Research Pipelines'
   ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    const subject = encodeURIComponent(`[Project Inquiry] ${selectedService} - ${formData.company || formData.name}`);
+    const subject = encodeURIComponent(`[GTM Inquiry] ${selectedService} - ${formData.company || formData.name}`);
     const body = encodeURIComponent(
-      `Hi Adediwura,\n\nMy name is ${formData.name} from ${formData.company || 'my company'}.\n\nService needed: ${selectedService}\n\nOur problem / goal:\n${formData.problem}\n\nPlease reach me at: ${formData.email}`
+      `Hi Adediwura,\n\nMy name is ${formData.name} from ${formData.company || 'my company'}.\n\nArea of interest: ${selectedService}\n\nOur GTM bottleneck / goal:\n${formData.problem}\n\nPlease reach me at: ${formData.email}`
     );
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   };
@@ -53,13 +53,13 @@ export const ContactSection = () => {
           {/* Left Column: Headline & Direct Contact Details (Ken style) */}
           <div className="lg:col-span-5">
             <span className="text-xs font-mono uppercase tracking-[2.5px] text-slate-400 dark:text-slate-500 block mb-3">
-              Contact
+              Get in Touch
             </span>
             <h2 className="font-editorial text-3xl sm:text-5xl text-slate-900 dark:text-slate-100 font-normal tracking-tight mb-4">
-              Let's build something real.
+              Let's scale your product velocity and clarity.
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed mb-8">
-              Open to contracts, full-time AI roles, and ambitious automation systems. If you have an operational bottleneck worth solving, reach out.
+              Open to AI Product Marketing Manager roles, GTM automation contracts, and ambitious product launches. If you have an operational or conversion bottleneck worth solving, reach out.
             </p>
 
             {/* Direct Channels */}
@@ -134,17 +134,17 @@ export const ContactSection = () => {
           <div className="lg:col-span-7">
             <div className="p-8 sm:p-10 rounded-2xl bg-dark-900/70 border border-dark-800 shadow-2xl backdrop-blur-sm">
               <h3 className="font-editorial text-2xl text-slate-100 mb-2 font-medium">
-                Scope Your Automation or Product
+                Scope Your GTM System or AI Launch
               </h3>
               <p className="text-sm text-slate-400 mb-6 font-sans">
-                Select your area of interest and tell me what operational challenge you're trying to solve.
+                Select your primary objective and describe the operational or conversion challenge you are solving.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Service Selection Pills */}
                 <div>
                   <label className="text-xs font-mono uppercase text-slate-400 block mb-2.5">
-                    What system are you looking to build?
+                    What GTM system or workflow are you looking to build?
                   </label>
                   <div className="flex flex-wrap gap-2">
                     {services.map((srv) => (

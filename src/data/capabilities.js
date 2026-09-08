@@ -1,22 +1,22 @@
 export const capabilities = [
   {
     id: 'ai-automation',
-    title: 'AI Workflow Automation',
+    title: 'AI-Powered GTM Automation',
     tagline: 'Zero-Friction Operational Pipelines',
     iconName: 'Workflow',
-    description: 'Autonomous workflows connecting LLMs, APIs, databases, and business apps. Eliminating repetitive manual triage, data entry, and lost customer handoffs.',
+    description: 'Autonomous workflows connecting LLMs, APIs, databases, and CRM platforms. Eliminating repetitive manual triage, lead drop-off, and sales handoff friction.',
     deliverables: [
       'Multi-branch n8n workflows',
       'Webhook & API integration',
       'Deterministic error-handling & fallbacks',
-      'CRM sync (HubSpot, Airtable, Sheets)'
+      'CRM sync (HubSpot, Sheets)'
     ],
-    highlight: 'n8n · Webhooks · APIs · Google Workspace'
+    highlight: 'n8n · Webhooks · APIs · HubSpot CRM'
   },
   {
     id: 'voice-agents',
     title: 'AI Voice Agents',
-    tagline: '24/7 Sub-Second Telephony',
+    tagline: '24/7 Sub-Second Buyer Telephony',
     iconName: 'PhoneCall',
     description: 'Natural conversational voice experiences powered by low-latency voice synthesis and VoIP telephony. Handles after-hours qualification, booking, and triage.',
     deliverables: [
@@ -29,21 +29,21 @@ export const capabilities = [
   },
   {
     id: 'ai-agents',
-    title: 'Autonomous AI Agents',
+    title: 'Autonomous Market & Customer Intelligence Agents',
     tagline: 'Structured Reasoning & Execution',
     iconName: 'Bot',
     description: 'Intelligent software agents that parse unstructured text, validate data against strict JSON schemas, and trigger multi-step actions across your tech stack.',
     deliverables: [
       'Document & inquiry extraction',
-      'Sensitivity & sentiment filtering',
+      'Sensitivity & risk filtering',
       'Zero-hallucination deterministic fallbacks',
       'Automated triage & ticketing'
     ],
-    highlight: 'Agentic Workflows · Schema Validation'
+    highlight: 'Agentic Workflows · ICP Schema Validation'
   },
   {
     id: 'ai-products',
-    title: 'AI Products & Tools',
+    title: 'AI Products & Interactive Tools',
     tagline: 'Customer-Facing Intelligent Systems',
     iconName: 'Sparkles',
     description: 'Building practical digital products and web experiences that embed AI directly into customer value journeys—turning complex mechanics into simple interfaces.',
@@ -51,7 +51,7 @@ export const capabilities = [
       'Interactive client portals',
       'AI-enhanced web experiences',
       'Custom internal business tools',
-      'Full-stack prototyping'
+      'Full-stack GTM prototyping'
     ],
     highlight: 'Modern Web Apps · Product Architecture'
   },
@@ -71,7 +71,7 @@ export const capabilities = [
   },
   {
     id: 'digital-growth',
-    title: 'Digital Growth & Content Systems',
+    title: 'Digital Growth & Product Distribution',
     tagline: 'From Attention to Conversion',
     iconName: 'TrendingUp',
     description: 'The strategic foundation: content strategy, social distribution, and acquisition funnels that ensure your technology actually converts and generates revenue.',
@@ -79,8 +79,8 @@ export const capabilities = [
       'High-converting content calendars',
       'Link-in-bio & social conversion funnels',
       'Organic reach & engagement strategy',
-      'Product positioning & GTM messaging'
+      'Product Market Fit, Product positioning & GTM messaging'
     ],
-    highlight: 'Meta Business · TikTok · Funnel Strategy'
+    highlight: 'Product-Market Fit · Positioning · GTM Funnels'
   }
 ];

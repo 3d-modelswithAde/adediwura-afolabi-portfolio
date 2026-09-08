@@ -10,8 +10,10 @@ import { CareerEvolution } from './components/CareerEvolution';
 import { Testimonials } from './components/Testimonials';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { Loader } from './components/Loader';
 
 export function App() {
+  const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'dark';
   });
@@ -32,6 +34,7 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-dark-950 dark:text-slate-100 flex flex-col font-sans selection:bg-gold-500/20 selection:text-gold-600 dark:selection:text-gold-400 transition-colors duration-300">
+      {loading && <Loader onComplete={() => setLoading(false)} />}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="flex-grow">
         <Hero />

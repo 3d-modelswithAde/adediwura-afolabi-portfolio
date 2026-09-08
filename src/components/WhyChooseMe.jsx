@@ -7,37 +7,37 @@ export const WhyChooseMe = () => {
       number: '01',
       title: 'Systems First',
       icon: Layers,
-      description: 'I treat business operations like engineering state machines. Every input is typed, every workflow is idempotent, and failure states are addressed upfront rather than patched in panic.'
+      description: 'I treat product funnels like engineering state machines. Every transition is typed, every workflow is idempotent, and failure states are handled upfront.'
     },
     {
       number: '02',
       title: 'Ships to Production',
       icon: Gauge,
-      description: 'I don’t leave you with fragmented Zapier steps or theoretical Python scripts. I deliver fully orchestrated, active production workflows running on automated cron and webhook schedules.'
+      description: 'I deliver fully orchestrated, active production workflows running on automated cron and webhook schedules rather than disconnected scripts.'
     },
     {
       number: '03',
       title: 'Fail-Safe by Design',
       icon: ShieldCheck,
-      description: 'The core invariant: customer records are saved in your CRM before AI reasoning executes. If an LLM or third-party service times out, your lead data is never lost.'
+      description: 'Lead records are committed to CRM storage before triggering downstream AI tasks, guaranteeing zero lead loss.'
     },
     {
       number: '04',
       title: 'Frontline Conversion Empathy',
       icon: HeartHandshake,
-      description: 'Because I managed social customer acquisition and generated hundreds of paid orders, I design systems around real human buying behavior, not abstract software logic.'
+      description: 'Having personally managed acquisition campaigns and driven 250+ paid customer orders, I design around human buying psychology.'
     },
     {
       number: '05',
       title: 'Full Ownership',
       icon: CheckCircle2,
-      description: 'From initial workflow mapping and schema design to telephony SIP integration, automated regression testing, and team training—I own the entire delivery lifecycle.'
+      description: 'I own the entire lifecycle from positioning narrative and workflow mapping to technical integration, automated testing, and sales enablement.'
     },
     {
       number: '06',
       title: 'Zero Ambiguity',
       icon: Scale,
-      description: 'Deterministic pricing, strict JSON schemas, and multi-column audit trails ensure zero hallucinations, zero pricing errors, and full compliance transparency.'
+      description: 'Deterministic lookup matrices and strict JSON schemas eliminate pricing hallucinations and maintain compliance transparency.'
     }
   ];
 

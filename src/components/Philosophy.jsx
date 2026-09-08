@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ShieldCheck, Zap, Rocket, MapPin, Layers, Target, GraduationCap } from 'lucide-react';
 
 export const Philosophy = () => {
-  const manifestoText = "I build business automations the way engineers design physical control systems. Every webhook has a contract, every model has a schema, every failure has a fallback. I don't just build scripts. I build the operational infrastructure that businesses run on.";
+  const manifestoText = "I build product marketing systems the way engineers design physical control loops. Every lead has an ICP schema, every workflow has a fallback, and every message is calibrated for conversion. I don't just write copy. I automate the operational GTM engine that businesses run on.";
   const words = manifestoText.split(' ');
 
   const [activeWordIndex, setActiveWordIndex] = useState(-1);
@@ -34,13 +34,14 @@ export const Philosophy = () => {
                 Philosophy
               </span>
               <h2 className="font-editorial text-4xl lg:text-5xl font-normal tracking-tight text-slate-900 dark:text-slate-100 leading-[1.1] mb-6">
-                Thinking<br className="hidden sm:inline" /> in systems.
+                Thinking in systems. <br className="hidden sm:inline" />
+                <span className="text-slate-500 dark:text-slate-400 italic font-medium">Marketing with precision.</span>
               </h2>
               <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-normal mb-4">
-                I don't automate to impress, I build to deliver. I value quality architecture, deterministic execution, and measurable conversion over clever prompt tricks and fragile scripts. The systems that survive in production are the ones engineered with fail-safes from day one.
+                I don't automate to impress, I build to deliver. I value clean GTM architecture, deterministic execution, and measurable conversion over clever prompt tricks and fragile marketing scripts. The GTM systems that survive in production are the ones engineered with fail-safes from day one.
               </p>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Before writing automations, I operated on the frontlines of Social Media Management and Customer Acquisition. That experience taught me what many developers miss: technology is worthless if it doesn't align with human psychology, reduce buyer friction, and produce undeniable commercial outcomes.
+                Before writing automations, I operated on the frontlines of Social Media Management and Customer Acquisition. That experience taught me what many product marketers miss: technology is worthless if it doesn't align with human psychology, reduce buyer friction, and produce undeniable commercial outcomes.
               </p>
             </div>
 
@@ -69,7 +70,7 @@ export const Philosophy = () => {
                     Stack
                   </p>
                   <p className="text-xs font-medium text-slate-800 dark:text-slate-200">
-                    AI & Systems
+                    GTM & AI Systems
                   </p>
                 </div>
               </div>
@@ -83,7 +84,7 @@ export const Philosophy = () => {
                     Focus
                   </p>
                   <p className="text-xs font-medium text-slate-800 dark:text-slate-200">
-                    Voice AI & Intake
+                    AI PMM & Voice GTM
                   </p>
                 </div>
               </div>
@@ -137,7 +138,7 @@ export const Philosophy = () => {
                   Clean Architecture
                 </h3>
                 <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
-                  Workflows are engineered with invariants: CRM records are created before AI execution, tracking IDs are dual-mapped, and schemas are strictly validated. Systems that are easy to extend and resilient to failure.
+                  Workflows built with invariants—CRM enrichment occurs prior to AI execution, attribution IDs are dual-mapped, and schemas are strictly typed.
                 </p>
               </div>
 
@@ -150,7 +151,7 @@ export const Philosophy = () => {
                   Performance First
                 </h3>
                 <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
-                  Speed and accuracy are baseline requirements. Commercial pricing is locked to immutable deterministic matrices, sensitivity triggers are quarantined immediately, and telephony response times remain sub-second.
+                  Response speed and messaging accuracy directly drive conversion. Pricing matrices are deterministic, and voice telephony response remains sub-second.
                 </p>
               </div>
 
@@ -163,7 +164,7 @@ export const Philosophy = () => {
                   Ship It
                 </h3>
                 <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
-                  No endless theoretical research or ungrounded prototypes. Systems are built, tested with standardized automated suites, and deployed to live production schedules in West Africa Time (WAT).
+                  No theoretical multi-week decks. Systems are automated, verified via automated test suites, and deployed to live production schedules in West Africa Time (WAT).
                 </p>
               </div>
 

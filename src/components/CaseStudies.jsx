@@ -19,12 +19,12 @@ export const CaseStudies = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [activeProjectId, setActiveProjectId] = useState(projects[0].id);
 
-  const categories = ['All', 'Enterprise Automation', 'Voice AI', 'Operations & Data', 'Digital Growth'];
+  const categories = ['All', 'Enterprise GTM Automation', 'Voice GTM', 'Lifecycle Operations', 'Digital Growth'];
 
   const categoryMap = {
-    'intake-agent': 'Enterprise Automation',
-    'voice-agent': 'Voice AI',
-    'community-birthday': 'Operations & Data',
+    'intake-agent': 'Enterprise GTM Automation',
+    'voice-agent': 'Voice GTM',
+    'community-birthday': 'Lifecycle Operations',
     'social-media-growth': 'Digital Growth'
   };
 

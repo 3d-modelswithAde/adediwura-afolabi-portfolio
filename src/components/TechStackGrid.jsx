@@ -16,7 +16,7 @@ export const TechStackGrid = () => {
             Tools of the trade.
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
-            Proficient across workflow orchestration, conversational telephony, AI intelligence, and engineering analysis.
+            Proficient across GTM workflow orchestration, conversational telephony, AI intelligence, and product positioning.
           </p>
         </div>
 

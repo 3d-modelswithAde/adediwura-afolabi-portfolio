@@ -20,7 +20,6 @@ export const Navbar = ({ theme, toggleTheme }) => {
     { name: 'Why Me', href: '#why-me' },
     { name: 'Systems', href: '#projects' },
     { name: 'Experience', href: '#evolution' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -43,19 +42,10 @@ export const Navbar = ({ theme, toggleTheme }) => {
                 Adediwura Afolabi
               </span>
               <span className="text-[11px] text-slate-500 dark:text-slate-400 font-mono block">
-                AI Product Builder
+                AI Product Marketing Manager
               </span>
             </div>
           </a>
-
-          {/* Availability Badge (Amber / Gold - NO GREEN) */}
-          <div className="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100/90 dark:bg-dark-900/80 border border-amber-500/30 text-xs text-amber-600 dark:text-gold-400 font-mono">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500 dark:bg-gold-400"></span>
-            </span>
-            Available to work globally
-          </div>
 
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex items-center gap-6">
@@ -109,14 +99,6 @@ export const Navbar = ({ theme, toggleTheme }) => {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white/95 dark:bg-dark-950/95 backdrop-blur-xl border-b border-slate-200 dark:border-dark-800 px-6 py-6 space-y-4 animate-in fade-in slide-in-from-top-4 duration-200 shadow-xl">
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 dark:bg-dark-900 border border-amber-500/30 text-xs text-amber-600 dark:text-gold-400 font-mono w-max">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500 dark:bg-gold-400"></span>
-            </span>
-            Available to work globally
-          </div>
-
           <div className="flex flex-col space-y-3 pt-2">
             {navLinks.map((link) => (
               <a
