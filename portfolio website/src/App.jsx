@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { SkillsMarquee } from './components/SkillsMarquee';
 import { Philosophy } from './components/Philosophy';
 import { TechStackGrid } from './components/TechStackGrid';
 import { Capabilities } from './components/Capabilities';
@@ -38,6 +39,7 @@ export function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main className="flex-grow">
         <Hero />
+        <SkillsMarquee />
         <Philosophy />
         <TechStackGrid />
         <Capabilities />
