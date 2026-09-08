@@ -73,16 +73,23 @@ export const CaseStudies = () => {
         </div>
 
         {/* Responsive Project Grid with Individual Click-to-Enlarge Full Space */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 [grid-auto-flow:dense]">
           {filteredProjects.map((project) => {
             const isEnlarged = enlargedProjectId === project.id;
             return (
               <article
                 key={project.id}
-                onClick={() => toggleEnlarge(project.id)}
+                onClick={(e) => {
+                  const selection = window.getSelection();
+                  if (selection && selection.toString().length > 0) return;
+                  toggleEnlarge(project.id);
+                }}
+                style={{
+                  gridColumn: isEnlarged ? '1 / -1' : undefined,
+                }}
                 className={`group rounded-2xl bg-white dark:bg-dark-950 border transition-all duration-300 flex flex-col overflow-hidden cursor-pointer ${
                   isEnlarged
-                    ? 'lg:col-span-2 border-gold-500/60 dark:border-gold-400/50 shadow-2xl ring-1 ring-gold-500/30'
+                    ? 'col-span-full md:col-span-2 lg:col-span-2 border-gold-500/60 dark:border-gold-400/50 shadow-2xl ring-1 ring-gold-500/30'
                     : 'border-slate-200/90 dark:border-white/[0.08] shadow-sm hover:shadow-xl hover:border-gold-500/40 dark:hover:border-gold-400/30'
                 }`}
               >
