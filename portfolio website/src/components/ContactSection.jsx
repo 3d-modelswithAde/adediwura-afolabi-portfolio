@@ -63,26 +63,26 @@ export const ContactSection = () => {
             </p>
 
             {/* Direct Channels */}
-            <div className="space-y-3 mb-10">
+            <div className="space-y-3.5 mb-8">
               {/* Direct Email with Copy Action */}
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-dark-900 border border-slate-200 dark:border-dark-800 flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-white dark:bg-dark-950 border border-slate-200 dark:border-dark-700 flex items-center justify-center text-gold-500 dark:text-gold-400 shrink-0 shadow-sm">
+              <div className="p-4 rounded-xl bg-black border border-white/20 hover:border-gold-400/50 flex items-center justify-between gap-4 transition-all shadow-xl shadow-black/50 group">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-10 h-10 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center text-gold-400 shrink-0 group-hover:scale-105 transition-transform">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase text-slate-400 dark:text-slate-500 block">Email Address</span>
-                    <span className="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200">{email}</span>
+                    <span className="text-[11px] font-mono uppercase text-slate-400 block font-medium">Email Address</span>
+                    <span className="text-xs sm:text-sm font-semibold text-white tracking-wide">{email}</span>
                   </div>
                 </div>
                 <button
                   onClick={copyEmail}
-                  className="px-3 py-1.5 rounded-lg bg-white dark:bg-dark-850 hover:bg-slate-100 dark:hover:bg-dark-800 border border-slate-200 dark:border-dark-700 text-xs font-mono text-gold-600 dark:text-gold-400 transition-colors flex items-center gap-1.5 shadow-sm"
+                  className="px-3.5 py-1.5 rounded-lg bg-dark-900 hover:bg-dark-850 border border-white/20 hover:border-gold-400/60 text-xs font-mono text-gold-400 transition-colors flex items-center gap-1.5 shadow-sm cursor-pointer"
                 >
                   {copied ? (
                     <>
-                      <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 dark:text-gold-400" />
-                      <span className="text-gold-600 dark:text-gold-400">Copied!</span>
+                      <CheckCircle2 className="w-3.5 h-3.5 text-gold-400" />
+                      <span className="text-gold-400 font-bold">Copied!</span>
                     </>
                   ) : (
                     <>
@@ -98,64 +98,70 @@ export const ContactSection = () => {
                 href="https://www.linkedin.com/in/adediwura-afolabi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-xl bg-dark-900/60 border border-dark-800 hover:border-gold-500/30 flex items-center justify-between transition-colors group"
+                className="p-4 rounded-xl bg-black border border-white/20 hover:border-gold-400/60 flex items-center justify-between transition-all group shadow-xl shadow-black/50"
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-dark-850 border border-dark-700 flex items-center justify-center text-gold-400 group-hover:scale-105 transition-transform">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-10 h-10 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center text-gold-400 group-hover:scale-105 transition-transform shrink-0">
                     <LinkedInIcon className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono text-slate-500 uppercase block">LinkedIn</span>
-                    <span className="text-xs sm:text-sm font-medium text-slate-200">linkedin.com/in/adediwura-afolabi</span>
+                    <span className="text-[11px] font-mono text-slate-400 uppercase block font-medium">LinkedIn</span>
+                    <span className="text-xs sm:text-sm font-semibold text-white tracking-wide">linkedin.com/in/adediwura-afolabi</span>
                   </div>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-gold-400 transition-colors" />
+                <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-gold-400 transition-colors" />
               </a>
 
               {/* Location */}
-              <div className="p-4 rounded-xl bg-dark-900/60 border border-dark-800 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-dark-850 border border-dark-700 flex items-center justify-center text-gold-400">
+              <div className="p-4 rounded-xl bg-black border border-white/20 flex items-center gap-3.5 shadow-xl shadow-black/50">
+                <div className="w-10 h-10 rounded-lg bg-dark-900 border border-white/10 flex items-center justify-center text-gold-400 shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-mono text-slate-500 uppercase block">Location & Timezone</span>
-                  <span className="text-xs sm:text-sm font-medium text-slate-200">Lagos, Nigeria · West Africa Time (WAT / UTC+1)</span>
+                  <span className="text-[11px] font-mono text-slate-400 uppercase block font-medium">Location & Timezone</span>
+                  <span className="text-xs sm:text-sm font-semibold text-white tracking-wide">Lagos, Nigeria · West Africa Time (WAT / UTC+1)</span>
                 </div>
               </div>
             </div>
 
             {/* Invariant guarantee pill */}
-            <div className="p-4 rounded-xl bg-dark-900/40 border border-gold-500/20 text-xs text-slate-300 font-mono">
-              ⚡ Guaranteed response within 24 hours with an actionable systems breakdown.
+            <div className="p-4 rounded-xl bg-black border border-gold-500/40 shadow-xl shadow-black/60 text-xs text-white font-mono flex items-start sm:items-center gap-3">
+              <span className="text-gold-400 text-base shrink-0">⚡</span>
+              <span className="leading-relaxed text-slate-200">
+                <strong className="text-gold-400 font-bold uppercase tracking-wider">Guaranteed response:</strong> within 24 hours with an actionable systems breakdown.
+              </span>
             </div>
           </div>
 
           {/* Right Column: Interactive Consultation & Scoping Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-2xl bg-dark-900/70 border border-dark-800 shadow-2xl backdrop-blur-sm">
-              <h3 className="font-editorial text-2xl text-slate-100 mb-2 font-medium">
+            <div className="p-8 sm:p-10 rounded-2xl bg-black border border-white/20 shadow-2xl shadow-black/90 relative overflow-hidden ring-1 ring-white/10">
+              {/* Subtle ambient gold glow */}
+              <div className="absolute top-0 right-0 w-72 h-72 bg-gold-500/10 blur-[100px] pointer-events-none rounded-full" />
+
+              <h3 className="font-editorial text-2xl sm:text-3xl text-white mb-2 font-medium tracking-tight">
                 Scope Your GTM System or AI Launch
               </h3>
-              <p className="text-sm text-slate-400 mb-6 font-sans">
+              <p className="text-sm text-slate-300 mb-7 font-sans leading-relaxed">
                 Select your primary objective and describe the operational or conversion challenge you are solving.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 {/* Service Selection Pills */}
                 <div>
-                  <label className="text-xs font-mono uppercase text-slate-400 block mb-2.5">
-                    What GTM system or workflow are you looking to build?
+                  <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-3 font-semibold">
+                    What GTM system or workflow are you looking to build? <span className="text-gold-400">*</span>
                   </label>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2.5">
                     {services.map((srv) => (
                       <button
                         type="button"
                         key={srv}
                         onClick={() => setSelectedService(srv)}
-                        className={`px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all border ${
+                        className={`px-3.5 py-2 rounded-xl text-xs font-mono transition-all border cursor-pointer ${
                           selectedService === srv
-                            ? 'bg-gold-500/20 border-gold-500 text-gold-300 font-semibold'
-                            : 'bg-dark-950 border-dark-750 text-slate-400 hover:border-dark-600'
+                            ? 'bg-gold-400 text-slate-950 font-bold border-gold-400 shadow-[0_0_15px_rgba(251,191,36,0.35)]'
+                            : 'bg-black text-slate-200 border-white/20 hover:border-gold-400/60 hover:text-white'
                         }`}
                       >
                         {srv}
@@ -167,8 +173,8 @@ export const ContactSection = () => {
                 {/* Name & Email Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-mono uppercase text-slate-400 block mb-1.5">
-                      Your Name *
+                    <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
+                      Your Name <span className="text-gold-400">*</span>
                     </label>
                     <input
                       type="text"
@@ -176,13 +182,13 @@ export const ContactSection = () => {
                       placeholder="e.g. Alex Morgan"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-800 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-gold-500 transition-colors"
+                      className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono uppercase text-slate-400 block mb-1.5">
-                      Your Email *
+                    <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
+                      Your Email <span className="text-gold-400">*</span>
                     </label>
                     <input
                       type="email"
@@ -190,29 +196,29 @@ export const ContactSection = () => {
                       placeholder="alex@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-800 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-gold-500 transition-colors"
+                      className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans"
                     />
                   </div>
                 </div>
 
                 {/* Company / Brand */}
                 <div>
-                  <label className="text-xs font-mono uppercase text-slate-400 block mb-1.5">
-                    Company or Organization (Optional)
+                  <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
+                    Company or Organization <span className="text-slate-500 font-normal font-sans">(Optional)</span>
                   </label>
                   <input
                     type="text"
                     placeholder="e.g. Acme Health or GText Homes"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-800 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-gold-500 transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans"
                   />
                 </div>
 
                 {/* Problem Description */}
                 <div>
-                  <label className="text-xs font-mono uppercase text-slate-400 block mb-1.5">
-                    Describe the Process or Bottleneck *
+                  <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
+                    Describe the Process or Bottleneck <span className="text-gold-400">*</span>
                   </label>
                   <textarea
                     required
@@ -220,16 +226,16 @@ export const ContactSection = () => {
                     placeholder="e.g. We get 50 inquiries a day through WhatsApp and web forms. Our team takes 6 hours to respond, and we are losing deals outside business hours..."
                     value={formData.problem}
                     onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-dark-950 border border-dark-800 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-gold-500 transition-colors resize-none"
+                    className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all resize-none font-sans leading-relaxed"
                   />
                 </div>
 
                 {/* Submit CTA */}
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl bg-slate-100 text-dark-950 font-semibold text-sm hover:bg-white transition-all hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-xl bg-gold-400 hover:bg-gold-300 active:scale-[0.99] text-slate-950 font-bold text-sm sm:text-base tracking-wide transition-all duration-200 hover:shadow-[0_0_30px_rgba(251,191,36,0.45)] flex items-center justify-center gap-2.5 cursor-pointer shadow-lg shadow-gold-500/20"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4 text-slate-950" />
                   <span>Send Project Inquiry</span>
                 </button>
               </form>
