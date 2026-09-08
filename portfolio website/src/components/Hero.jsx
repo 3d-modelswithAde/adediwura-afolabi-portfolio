@@ -10,50 +10,50 @@ export const Hero = () => {
       label: '01. Input',
       subtext: 'Inbound Ingestion',
       icon: MessageSquare,
-      headline: 'Multi-Channel Inbound Ingestion',
-      description: 'Customer communications arrive via web lead forms, inbound telephony, WhatsApp messages, or support emails.',
-      technicalSpec: 'Twilio SIP / Webhook listener · REST API endpoint · Idempotency UUID generation',
-      businessImpact: 'Zero lost inquiries, no manual copying across inboxes, sub-second capture.'
+      headline: 'Multi-Touch Customer & Lead Ingestion',
+      description: 'Inbound prospect signals arrive via product lead forms, inbound telephony, WhatsApp messages, or support emails.',
+      technicalSpec: '⚡ Twilio SIP / Webhook listener ⇄ REST API endpoint ⨉ Lead UUID generation & event telemetry',
+      businessImpact: 'Zero lost inquiries, consolidated attribution, sub-second capture across all channels.'
     },
     {
       id: 1,
       label: '02. AI Reasoning',
       subtext: 'Extraction & Safety',
       icon: Bot,
-      headline: 'Structured AI Extraction & Sensitivity Quarantine',
+      headline: 'Autonomous ICP Qualification & Intent Parsing',
       description: 'LLMs extract unstructured inquiry details into strict JSON schemas while deterministic safety filters flag chargeback or legal risks.',
-      technicalSpec: 'OpenAI / Claude JSON Mode · Strict System Prompts · Regex Sensitivity Filters',
-      businessImpact: 'Zero-hallucination structured data; high-risk inquiries quarantined to human review.'
+      technicalSpec: '⚙️ OpenAI / Claude [JSON Mode] ⇄ Strict ICP Prompts ⨉ Regex Sensitivity Filters',
+      businessImpact: 'Zero-hallucination structured lead data; high-risk inquiries quarantined to human review.'
     },
     {
       id: 2,
       label: '03. Automation',
       subtext: 'Deterministic Logic',
       icon: Workflow,
-      headline: 'n8n Pipeline & CRM Fail-Safe Invariants',
-      description: 'The CRM Ticket is generated first before any downstream actions to guarantee no lead loss. Multi-branch routing moves inquiries seamlessly.',
-      technicalSpec: 'n8n Orchestration · HubSpot CRM API · Dual-ID tracking (inq_<uuid> + TRK-XXXX)',
-      businessImpact: '100% auditability; inquiries never get dropped even if third-party tools fail.'
+      headline: 'Lifecycle Sync & CRM Pipeline Invariants',
+      description: 'The CRM Ticket and Deal record are generated first before any downstream actions to guarantee no lead loss.',
+      technicalSpec: '⨀ n8n Orchestration ⇄ HubSpot CRM API ⇄ Dual-ID tracking (lead_<uuid> + TRK-XXXX)',
+      businessImpact: '100% GTM auditability; inquiries never get dropped even if third-party tools fail.'
     },
     {
       id: 3,
       label: '04. Action',
       subtext: 'Multi-Channel Dispatch',
       icon: Cpu,
-      headline: 'Real-Time Voice, Email & Telegram Dispatch',
+      headline: 'Hyper-Personalized Product Nurture & Voice Dispatch',
       description: 'The system triggers instantaneous multi-channel actions: customer quote delivery, sales rep Telegram alerts, and master ledger logging.',
-      technicalSpec: 'ElevenLabs Voice Synthesis · Twilio Call Dispatch · Telegram Bot API · Google Sheets Ledger',
-      businessImpact: 'Triage turnaround reduced from 4 hours to under 45 seconds.'
+      technicalSpec: '🎙️ ElevenLabs Voice Synthesis ⇄ Twilio Call Dispatch ⇄ Telegram Bot API ⇄ Google Sheets Ledger',
+      businessImpact: 'Lead response and triage turnaround reduced from 4 hours to under 45 seconds.'
     },
     {
       id: 4,
       label: '05. Result',
       subtext: 'Business Revenue',
       icon: CheckCircle2,
-      headline: 'Measurable Commercial Outcomes',
+      headline: 'Measurable Commercial & GTM Outcomes',
       description: 'Higher lead conversion, faster response times, and hours of repetitive manual administrative friction completely eliminated.',
-      technicalSpec: 'Real-Time Telemetry · Conversion Tracking · 25-Column Audit Trails',
-      businessImpact: 'Closed deals, protected customer goodwill, and scalable operations.'
+      technicalSpec: '📈 Real-Time Telemetry ⇄ Multi-Touch Conversion Tracking ⇄ 25-Column Audit Trails',
+      businessImpact: 'Accelerated deal closing, protected customer goodwill, and scalable operations.'
     }
   ];
 
@@ -63,6 +63,7 @@ export const Hero = () => {
     'Twilio Telephony',
     'OpenAI & Claude LLMs',
     'HubSpot CRM API',
+    'GTM Positioning',
     'Python',
     'Google Workspace API',
     'Telegram Bot API',
@@ -70,7 +71,7 @@ export const Hero = () => {
     'Tailwind CSS',
     'SolidWorks CAD',
     'MATLAB',
-    'Docker & Linux',
+    'Product-Market Fit Loops',
     'Deterministic State Machines'
   ];
 
@@ -99,13 +100,15 @@ export const Hero = () => {
 
             {/* Giant Editorial Headline */}
             <h1 className="font-editorial text-4xl sm:text-6xl lg:text-[4.25rem] font-normal tracking-tight text-slate-900 dark:text-slate-100 leading-[1.06]">
-              Engineering systems. <br />
-              <span className="text-slate-500 dark:text-slate-400 italic font-medium">Automating at scale.</span>
+              Engineering GTM systems. <br />
+              <span className="text-slate-500 dark:text-slate-400 italic font-medium">
+                Automating product velocity.
+              </span>
             </h1>
 
             {/* Bio / Positioning Subheadline */}
             <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed max-w-xl font-normal">
-              AI Product Builder & Automation Developer. Mechatronics-trained, systems-minded, conversion-focused. Turning operational friction into autonomous, zero-hallucination pipelines.
+              AI Product Marketing Manager & Automation Strategist. Mechatronics-trained, systems-minded, conversion-focused. Turning GTM friction, lead qualification, and product onboarding into autonomous, zero-hallucination pipelines.
             </p>
 
             {/* Hero CTAs */}
@@ -114,7 +117,7 @@ export const Hero = () => {
                 href="#projects"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-slate-900 text-white dark:bg-slate-100 dark:text-dark-950 font-semibold text-sm hover:bg-slate-800 dark:hover:bg-white transition-all hover:shadow-lg active:scale-95"
               >
-                View Systems
+                View GTM Systems
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
@@ -133,7 +136,7 @@ export const Hero = () => {
                   10<span className="text-gold-500 dark:text-gold-400">+</span>
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400 font-sans">
-                  Systems Shipped
+                  GTM Systems Shipped
                 </div>
               </div>
               <div className="border-x border-slate-200 dark:border-dark-800 px-4">
@@ -141,7 +144,7 @@ export const Hero = () => {
                   250<span className="text-gold-500 dark:text-gold-400">+</span>
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400 font-sans">
-                  Commercial Orders
+                  Direct Customer Conversions
                 </div>
               </div>
               <div>
@@ -149,7 +152,7 @@ export const Hero = () => {
                   99.9<span className="text-gold-500 dark:text-gold-400">%</span>
                 </div>
                 <div className="text-xs text-slate-500 dark:text-slate-400 font-sans">
-                  Workflow Uptime
+                  Pipeline Execution Reliability
                 </div>
               </div>
             </div>
@@ -173,11 +176,11 @@ export const Hero = () => {
                     Adediwura Afolabi
                   </h3>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-gold-400 border border-white/10">
-                    WAT
+                    I work with your time zone
                   </span>
                 </div>
                 <p className="text-xs text-slate-300 mb-2">
-                  AI Product Builder & Automation Developer
+                  AI Product Marketing Manager
                 </p>
                 <div className="flex items-center gap-1.5 text-[11px] font-mono text-gold-400/90">
                   <span className="relative flex h-1.5 w-1.5">
@@ -212,7 +215,7 @@ export const Hero = () => {
                 Live Interactive System Architecture
               </span>
               <h2 className="font-editorial text-xl sm:text-2xl text-slate-900 dark:text-slate-100 font-normal">
-                How My Autonomous Workflows Execute
+                How Autonomous GTM Pipelines Execute
               </h2>
             </div>
             <div className="flex items-center gap-2 text-xs font-mono text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-dark-850 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-dark-700">

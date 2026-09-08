@@ -16,7 +16,7 @@ export const CareerEvolution = () => {
             Where I have built things.
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
-            An intentional progression from understanding audience psychology and frontline sales to orchestrating resilient, autonomous business systems.
+            An intentional progression from understanding audience psychology and frontline sales to orchestrating resilient, autonomous GTM systems.
           </p>
         </div>
 

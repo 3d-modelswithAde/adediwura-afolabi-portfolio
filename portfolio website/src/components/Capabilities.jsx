@@ -27,7 +27,7 @@ export const Capabilities = () => {
             What I bring to the table.
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg">
-            End-to-end intelligent systems designed to remove operational bottlenecks, qualify high-value customers 24/7, and eliminate repetitive human friction.
+            End-to-end GTM systems designed to eliminate product adoption friction, qualify high-intent buyers 24/7, and accelerate pipeline velocity.
           </p>
         </div>
 

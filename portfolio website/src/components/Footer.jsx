@@ -20,7 +20,7 @@ export const Footer = () => {
                 Adediwura Afolabi
               </span>
               <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500">
-                Engineering Mindset · Creative Execution · AI-Powered Thinking
+                Engineering Mindset · GTM Execution · AI-Automated Velocity
               </span>
             </div>
           </div>
