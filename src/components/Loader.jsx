@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 export const Loader = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const onCompleteRef = React.useRef(onComplete);
+  onCompleteRef.current = onComplete;
 
   useEffect(() => {
     const startTime = Date.now();
-    const duration = 1200; // 1.2 seconds smooth load
+    const duration = 900; // Snappy smooth load
 
     const interval = setInterval(() => {
       const elapsed = Date.now() - startTime;
@@ -18,13 +20,13 @@ export const Loader = ({ onComplete }) => {
         clearInterval(interval);
         setIsFading(true);
         setTimeout(() => {
-          if (onComplete) onComplete();
-        }, 500);
+          if (onCompleteRef.current) onCompleteRef.current();
+        }, 400);
       }
-    }, 20);
+    }, 16);
 
     return () => clearInterval(interval);
-  }, [onComplete]);
+  }, []);
 
   // Circumference of r=52 circle = 2 * PI * 52 ≈ 326.72
   const circumference = 326.72;
