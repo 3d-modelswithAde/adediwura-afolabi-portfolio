@@ -106,7 +106,7 @@ export const CaseStudies = () => {
                       </span>
                     </div>
 
-                    <span className="px-3 py-0.5 rounded-full text-[10px] font-mono border bg-amber-50 dark:bg-gold-950/40 text-amber-800 dark:text-gold-300 border-amber-300/60 dark:border-gold-500/30 flex-shrink-0">
+                    <span className="px-3 py-0.5 rounded-full text-[10px] font-mono border bg-amber-50 dark:bg-black text-amber-900 dark:text-gold-400 border-amber-300/60 dark:border-gold-500/40 flex-shrink-0 font-medium shadow-sm">
                       ● {project.badge}
                     </span>
                   </div>
@@ -219,14 +219,16 @@ export const CaseStudies = () => {
                       ))}
                     </div>
 
-                    {/* Verified Outcome Callout Box */}
-                    <div className="p-4 rounded-xl bg-amber-50/70 dark:bg-gold-950/20 border border-amber-200/80 dark:border-gold-500/30 flex items-start gap-3">
-                      <TrendingUp className="w-4 h-4 text-amber-600 dark:text-gold-400 shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <span className="text-[10px] font-mono uppercase text-amber-800 dark:text-gold-400 block font-semibold mb-0.5">
+                    {/* Verified Outcome Callout Box - High Contrast for both Light and Dark Modes */}
+                    <div className="p-4 sm:p-4.5 rounded-xl bg-amber-50/90 dark:bg-black border border-amber-300/80 dark:border-gold-500/50 border-l-4 border-l-amber-500 dark:border-l-gold-400 shadow-sm dark:shadow-xl dark:shadow-black/70 flex items-start gap-3.5 transition-colors duration-200">
+                      <div className="p-1.5 rounded-lg bg-amber-100/90 dark:bg-dark-900 border border-amber-300/60 dark:border-gold-500/30 text-amber-800 dark:text-gold-400 shrink-0 mt-0.5 shadow-sm">
+                        <TrendingUp className="w-4 h-4" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-amber-950 dark:text-gold-400 block font-bold mb-1">
                           Verified Commercial Outcome:
                         </span>
-                        <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-sans leading-relaxed">
+                        <p className="text-xs sm:text-sm text-slate-900 dark:text-white font-sans font-medium leading-relaxed">
                           {project.outcome}
                         </p>
                       </div>
