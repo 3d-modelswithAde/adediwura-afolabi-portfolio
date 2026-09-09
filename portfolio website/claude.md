@@ -3,6 +3,8 @@
 ## Project Overview
 
 Build a premium personal portfolio website for **Adediwura Afolabi**.
+the vercel account is: adediwuraainaafolabi-8122
+the github account name is: 3d-modelswithAde
 
 The website should position Adediwura as an emerging:
 
