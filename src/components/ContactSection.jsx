@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Send, CheckCircle2, ArrowUpRight, Copy, MessageSquare } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2, ArrowUpRight, Copy, Loader2, AlertCircle } from 'lucide-react';
 
 const LinkedInIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -16,7 +16,9 @@ export const ContactSection = () => {
     company: '',
     problem: '',
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const email = 'adediwura.ainaafolabi@gmail.com';
 
@@ -34,14 +36,48 @@ export const ContactSection = () => {
     'Market Intelligence & Research Pipelines'
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    const subject = encodeURIComponent(`[GTM Inquiry] ${selectedService} - ${formData.company || formData.name}`);
-    const body = encodeURIComponent(
-      `Hi Adediwura,\n\nMy name is ${formData.name} from ${formData.company || 'my company'}.\n\nArea of interest: ${selectedService}\n\nOur GTM bottleneck / goal:\n${formData.problem}\n\nPlease reach me at: ${formData.email}`
-    );
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    const payload = {
+      objective: selectedService.trim(),
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      company: formData.company ? formData.company.trim() : '',
+      process: formData.problem.trim(),
+    };
+
+    const webhookUrl = import.meta.env.VITE_ENQUIRY_WEBHOOK_URL || 'http://localhost:5678/webhook/portfolio-enquiry';
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data && data.success === true) {
+        setIsSubmitted(true);
+      } else {
+        setErrorMessage('Something went wrong while sending your enquiry. Please try again.');
+      }
+    } catch (err) {
+      setErrorMessage('Something went wrong while sending your enquiry. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -139,106 +175,162 @@ export const ContactSection = () => {
               {/* Subtle ambient gold glow */}
               <div className="absolute top-0 right-0 w-72 h-72 bg-gold-500/10 blur-[100px] pointer-events-none rounded-full" />
 
-              <h3 className="font-editorial text-2xl sm:text-3xl text-white mb-2 font-medium tracking-tight">
-                Scope Your GTM System or AI Launch
-              </h3>
-              <p className="text-sm text-slate-300 mb-7 font-sans leading-relaxed">
-                Select your primary objective and describe the operational or conversion challenge you are solving.
-              </p>
-
-              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
-                {/* Service Selection Pills */}
-                <div>
-                  <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-3 font-semibold">
-                    What GTM system or workflow are you looking to build? <span className="text-gold-400">*</span>
-                  </label>
-                  <div className="flex flex-wrap gap-2.5">
-                    {services.map((srv) => (
-                      <button
-                        type="button"
-                        key={srv}
-                        onClick={() => setSelectedService(srv)}
-                        className={`px-3.5 py-2 rounded-xl text-xs font-mono transition-all border cursor-pointer ${
-                          selectedService === srv
-                            ? 'bg-gold-400 text-slate-950 font-bold border-gold-400 shadow-[0_0_15px_rgba(251,191,36,0.35)]'
-                            : 'bg-black text-slate-200 border-white/20 hover:border-gold-400/60 hover:text-white'
-                        }`}
-                      >
-                        {srv}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Name & Email Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
-                      Your Name <span className="text-gold-400">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Alex Morgan"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans"
-                    />
+              {isSubmitted ? (
+                /* Success State matching exact specification */
+                <div className="relative z-10 py-6 sm:py-8 flex flex-col items-start">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-gold-400/10 border border-gold-400/30 text-gold-400 mb-6 shadow-sm">
+                    <CheckCircle2 className="w-4 h-4 text-gold-400" />
+                    <span className="font-semibold tracking-wide">Enquiry Successfully Dispatched</span>
                   </div>
 
-                  <div>
-                    <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
-                      Your Email <span className="text-gold-400">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="alex@company.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans"
-                    />
+                  <h3 className="font-editorial text-2xl sm:text-3xl text-white mb-4 font-medium tracking-tight leading-snug">
+                    Your enquiry is in. Let’s turn the bottleneck into a system.
+                  </h3>
+
+                  <p className="text-sm sm:text-base text-slate-300 font-sans leading-relaxed mb-8">
+                    Thank you for sharing your business details. I’ll review your current challenge and come back with a strategy focused on the opportunities, systems, and next steps that can move your business forward.
+                  </p>
+
+                  <div className="w-full p-4 rounded-xl bg-dark-900/90 border border-white/10 text-xs font-mono text-slate-300 flex items-center gap-3 shadow-lg">
+                    <span className="text-gold-400 text-base shrink-0">⚡</span>
+                    <span className="leading-relaxed">
+                      <strong className="text-gold-400 font-bold uppercase tracking-wider">Direct Review:</strong> Guaranteed response within 24 hours with an actionable systems breakdown.
+                    </span>
                   </div>
                 </div>
+              ) : (
+                /* Form State */
+                <div className="relative z-10">
+                  <h3 className="font-editorial text-2xl sm:text-3xl text-white mb-2 font-medium tracking-tight">
+                    Scope Your GTM System or AI Launch
+                  </h3>
+                  <p className="text-sm text-slate-300 mb-7 font-sans leading-relaxed">
+                    Select your primary objective and describe the operational or conversion challenge you are solving.
+                  </p>
 
-                {/* Company / Brand */}
-                <div>
-                  <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
-                    Company or Organization <span className="text-slate-500 font-normal font-sans">(Optional)</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g. Acme Health or GText Homes"
-                    value={formData.company}
-                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans"
-                  />
+                  {errorMessage && (
+                    <div className="mb-6 p-4 rounded-xl bg-rose-950/60 border border-rose-500/50 text-rose-200 text-xs sm:text-sm font-sans flex items-start gap-3 shadow-lg">
+                      <AlertCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="leading-relaxed">{errorMessage}</p>
+                      </div>
+                    </div>
+                  )}
+
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Service Selection Pills */}
+                    <div>
+                      <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-3 font-semibold">
+                        What GTM system or workflow are you looking to build? <span className="text-gold-400">*</span>
+                      </label>
+                      <div className="flex flex-wrap gap-2.5">
+                        {services.map((srv) => (
+                          <button
+                            type="button"
+                            key={srv}
+                            disabled={isSubmitting}
+                            onClick={() => setSelectedService(srv)}
+                            className={`px-3.5 py-2 rounded-xl text-xs font-mono transition-all border cursor-pointer ${
+                              selectedService === srv
+                                ? 'bg-gold-400 text-slate-950 font-bold border-gold-400 shadow-[0_0_15px_rgba(251,191,36,0.35)]'
+                                : 'bg-black text-slate-200 border-white/20 hover:border-gold-400/60 hover:text-white'
+                            } ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                          >
+                            {srv}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Name & Email Row */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
+                          Your Name <span className="text-gold-400">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          disabled={isSubmitting}
+                          placeholder="e.g. Alex Morgan"
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans disabled:opacity-60"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
+                          Your Email <span className="text-gold-400">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          required
+                          disabled={isSubmitting}
+                          placeholder="alex@company.com"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans disabled:opacity-60"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Company / Brand */}
+                    <div>
+                      <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
+                        Company or Organization <span className="text-slate-500 font-normal font-sans">(Optional)</span>
+                      </label>
+                      <input
+                        type="text"
+                        disabled={isSubmitting}
+                        placeholder="e.g. Acme Health or GText Homes"
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all font-sans disabled:opacity-60"
+                      />
+                    </div>
+
+                    {/* Problem Description */}
+                    <div>
+                      <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
+                        Describe the Process or Bottleneck <span className="text-gold-400">*</span>
+                      </label>
+                      <textarea
+                        required
+                        disabled={isSubmitting}
+                        rows={4}
+                        placeholder="e.g. We get 50 inquiries a day through WhatsApp and web forms. Our team takes 6 hours to respond, and we are losing deals outside business hours..."
+                        value={formData.problem}
+                        onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
+                        className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all resize-none font-sans leading-relaxed disabled:opacity-60"
+                      />
+                    </div>
+
+                    {/* Submit CTA */}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className={`w-full py-4 rounded-xl font-bold text-sm sm:text-base tracking-wide transition-all duration-200 flex items-center justify-center gap-2.5 shadow-lg ${
+                        isSubmitting
+                          ? 'bg-gold-500/70 text-slate-950 cursor-wait opacity-80'
+                          : 'bg-gold-400 hover:bg-gold-300 active:scale-[0.99] text-slate-950 cursor-pointer shadow-gold-500/20 hover:shadow-[0_0_30px_rgba(251,191,36,0.45)]'
+                      }`}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 text-slate-950 animate-spin" />
+                          <span>Sending Inquiry...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4 text-slate-950" />
+                          <span>Send Project Inquiry</span>
+                        </>
+                      )}
+                    </button>
+                  </form>
                 </div>
-
-                {/* Problem Description */}
-                <div>
-                  <label className="text-xs font-mono uppercase tracking-wider text-slate-200 block mb-2 font-semibold">
-                    Describe the Process or Bottleneck <span className="text-gold-400">*</span>
-                  </label>
-                  <textarea
-                    required
-                    rows={4}
-                    placeholder="e.g. We get 50 inquiries a day through WhatsApp and web forms. Our team takes 6 hours to respond, and we are losing deals outside business hours..."
-                    value={formData.problem}
-                    onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
-                    className="w-full px-4 py-3.5 rounded-xl bg-black border border-white/25 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all resize-none font-sans leading-relaxed"
-                  />
-                </div>
-
-                {/* Submit CTA */}
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-xl bg-gold-400 hover:bg-gold-300 active:scale-[0.99] text-slate-950 font-bold text-sm sm:text-base tracking-wide transition-all duration-200 hover:shadow-[0_0_30px_rgba(251,191,36,0.45)] flex items-center justify-center gap-2.5 cursor-pointer shadow-lg shadow-gold-500/20"
-                >
-                  <Send className="w-4 h-4 text-slate-950" />
-                  <span>Send Project Inquiry</span>
-                </button>
-              </form>
+              )}
             </div>
           </div>
 
