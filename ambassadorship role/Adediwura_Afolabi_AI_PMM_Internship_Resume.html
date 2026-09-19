@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adediwura Afolabi - AI Product Marketing Manager (Internship) Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-serif: 'Lora', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --primary: #000000;
+      --accent: #C85A32; /* Signature Warm Terracotta */
+      --text: #000000;
+      --text-muted: #111111;
+      --border: #C85A32;
+      --border-accent: #C85A32;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-serif);
+      color: #000000;
+      background-color: #f8fafc;
+      line-height: 1.5;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 32px auto;
+      background: #ffffff;
+      padding: 44px 50px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border-radius: 4px;
+    }
+
+    .actions-bar {
+      max-width: 820px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: var(--font-sans);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      background-color: var(--accent);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn:hover {
+      background-color: #A84325;
+    }
+
+    .btn-secondary {
+      background-color: #f1f5f9;
+      color: #000000;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e2e8f0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #000000;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .target-role {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .sub-role {
+      font-size: 12.5px;
+      color: #000000;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .contact-links {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: #000000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .contact-links span {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .contact-links a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .contact-links a:hover {
+      text-decoration: none;
+    }
+
+    .separator {
+      color: var(--accent);
+      margin: 0 4px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    .summary-text {
+      text-align: justify;
+      color: #000000;
+      line-height: 1.55;
+    }
+
+    .item {
+      margin-bottom: 12px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    .item-company {
+      font-style: italic;
+      color: #000000;
+    }
+
+    .item-date {
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      color: #000000;
+      font-weight: 600;
+    }
+
+    ul.bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 4px;
+    }
+
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 4px;
+      color: #000000;
+      line-height: 1.45;
+    }
+
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 3px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    ul.bullet-list li strong {
+      color: #000000;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .skill-line {
+      line-height: 1.45;
+      color: #000000;
+    }
+
+    .skill-line strong {
+      color: #000000;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .actions-bar {
+        display: none !important;
+      }
+
+      .page {
+        margin: 0;
+        padding: 20px 28px;
+        box-shadow: none;
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 22px;
+        margin-bottom: 2px;
+      }
+
+      .section-title {
+        font-size: 12px;
+        margin-bottom: 6px;
+        padding-bottom: 2px;
+      }
+
+      .item {
+        margin-bottom: 9px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="actions-bar">
+    <button class="btn" onclick="window.print()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="page">
+    <header>
+      <h1>Adediwura Afolabi</h1>
+      <div class="target-role">Target Role: AI Product Marketing Manager Intern (AI PMM)</div>
+      <div class="sub-role">First-Class Mechatronics Engineering Background (4.70/5.00 CGPA) | SaaS GTM Positioning, Frontline User Acquisition & Automated Revenue Operations</div>
+      <div class="contact-links">
+        <span>Lagos, Nigeria (WAT) | Open to Remote</span>
+        <span class="separator">|</span>
+        <span>+234 816 555 3106</span>
+        <span class="separator">|</span>
+        <span><a href="mailto:adediwura.ainaafolabi@gmail.com">adediwura.ainaafolabi@gmail.com</a></span>
+        <span class="separator">|</span>
+        <span><a href="https://linkedin.com/in/adediwura-afolabi" target="_blank">LinkedIn Profile</a></span>
+        <span class="separator">|</span>
+        <span><a href="https://bit.ly/Adediwuracertificates" target="_blank">Portfolio & Credentials</a></span>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary-text">
+        Systems-driven AI Product Marketer and First-Class Mechatronics Engineering undergraduate at the Federal University of Technology Akure (4.70/5.00 CGPA, Best Female Student in Faculty). Bridges complex technical architectures with market psychology to build high-converting Go-To-Market (GTM) launches, crisp value propositions, and autonomous revenue systems. Proven track record in 0-to-1 frontline user acquisition (acquiring first 100+ users from scratch, generating 520+ qualified inbound inquiries, and driving 250+ paid customer transactions) alongside engineering deterministic AI automation pipelines (n8n, conversational AI voice agents, and CRM workflows slashing lead response times from 4 hours to 45 seconds). Seeking an AI Product Marketing Manager Internship to accelerate product adoption, craft compelling technical storytelling, and scale customer acquisition for high-growth SaaS and AI teams.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <div class="section-title">Education</div>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Federal University of Technology Akure (FUTA)</span> — <span class="item-company">Akure, Ondo State, Nigeria</span>
+          </div>
+          <span class="item-date">June 2023 – Nov 2027 (Expected)</span>
+        </div>
+        <div style="font-weight: 600; margin-bottom: 2px;">Bachelor of Engineering (B.Eng.) in Mechatronics Engineering</div>
+        <ul class="bullet-list">
+          <li><strong>Cumulative GPA:</strong> <strong>4.70 / 5.00</strong> (First Class Honours Standing)</li>
+          <li><strong>Academic Honors:</strong> Best Female Student Award, School of Engineering and Engineering Technology (SEET / FUTANA)</li>
+          <li><strong>Scholarships:</strong> Mt Babs Foundation Merit Scholarship Award Recipient (Top 1% STEM cohort)</li>
+          <li><strong>Leadership:</strong> Elected Class Representative, Mechatronics Engineering Department (Cohort of 43 Students)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CORE COMPETENCIES & TECHNICAL STACK -->
+    <section>
+      <div class="section-title">Core Competencies & Technical Stack</div>
+      <div class="skills-grid">
+        <div class="skill-line">
+          <strong>AI Product Marketing (PMM):</strong> Go-To-Market (GTM) Launch Architecture, Positioning & Messaging Hierarchies, ICP & Buyer Persona Profiling, Feature-Benefit-Outcome Translation, Competitive Teardowns & Battlecards, User Journey Mapping, Product Launch Collateral, Onboarding Funnel Optimization.
+        </div>
+        <div class="skill-line">
+          <strong>Autonomous Systems & AI Stack:</strong> n8n Workflow Orchestration, Anthropic Claude (Claude 3.5 Sonnet, Claude Code CLI), OpenAI API, Conversational AI Voice Agents (ElevenLabs, Twilio VoIP), Structured JSON Output Extraction, Sensitivity Quarantine Filters, Zero-Hallucination Guardrails, Webhooks & REST APIs, Python Basics.
+        </div>
+        <div class="skill-line">
+          <strong>Growth Marketing & Distribution:</strong> Frontline User Acquisition (0-to-100+ Users), Multi-Channel Campaign Execution (LinkedIn, TikTok, Instagram, WhatsApp), On-Page SEO & Content Strategy, Inbound Lead Generation, Email Automation, Digital Asset Design (Canva / Lora Standard).
+        </div>
+        <div class="skill-line">
+          <strong>Operations & Platforms:</strong> HubSpot CRM, Google Workspace (Docs, Sheets, Drive, Forms), Git / GitHub, Notion, Slack & Discord Community Architecture.
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT MARKETING & TECHNICAL WORK EXPERIENCE -->
+    <section>
+      <div class="section-title">Product Marketing & Technical Work Experience</div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">AI Product Marketing Specialist & Automation Builder</span> | <span class="item-company">Contract / Freelance</span>
+          </div>
+          <span class="item-date">2025 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Architect and deploy production agentic workflows combining LLMs, REST APIs, and CRM databases to accelerate go-to-market execution and eliminate sales friction for lean teams.</li>
+          <li>Engineered an autonomous inbound lead qualification and quoting engine in n8n, utilizing structured entity extraction and deterministic business logic to slash lead response time from 4 hours to under 45 seconds (99% reduction).</li>
+          <li>Formulated structured positioning matrices and 3-tier messaging hierarchies (Strategic Hook, Core Value Pillars, Feature-to-Benefit Proof Points) translating intricate technical software capabilities into high-converting buyer copy.</li>
+          <li>Prototyped low-latency conversational AI voice agents integrating ElevenLabs voice models and Twilio telephony for 24/7 inbound qualification, budget discovery, and real-time CRM updates.</li>
+          <li>Authored developer-facing technical documentation, executive sales briefs, and investor-ready ROI models for autonomous voice agents and workflow solutions.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Digital Growth Lead & Social Media Strategist</span> | <span class="item-company">Ovie’s Kitchen & Flowery Nectar Honey</span>
+          </div>
+          <span class="item-date">Apr 2025 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Conducted customer discovery and competitor teardowns to identify target buyer pain points, objections, and purchasing triggers across lifestyle and consumer verticals.</li>
+          <li>Built end-to-end digital acquisition funnels and produced 20+ short-form commercial/educational video assets per month across Instagram and TikTok, acquiring the first 100+ paid users from zero baseline.</li>
+          <li>Generated 520+ qualified inbound customer inquiries and directly converted 250+ paid commercial transactions within a 3-month launch sprint.</li>
+          <li>Executed on-page SEO audits and content optimizations across digital touchpoints, increasing organic profile discoverability and inbound conversion rates by 35%.</li>
+          <li>Managed creative workflows from ideation and copywriting to visual design, client approvals, and post-campaign analytics reporting.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Technical Content & Communications Specialist</span> | <span class="item-company">BootClass Academic Community</span>
+          </div>
+          <span class="item-date">Feb 2023 – Jan 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Authored structured technical documentation, learning roadmaps, and educational product briefs translating complex engineering and software concepts into clear, accessible guides for 500+ students.</li>
+          <li>Designed and launched the "21 Days of Examspiration" campaign—a structured daily motivational and study-strategy digital series sustaining academic retention across 300+ active student learners.</li>
+          <li>Co-organized 3 campus-wide "Marathon Revision Classes" reaching hundreds of university students across core STEM curricula, contributing to a 60% improvement in participant pass rates.</li>
+          <li>Standardized internal documentation systems and creative visual guidelines, establishing repeatable asset creation workflows and brand consistency.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- NOTABLE AI GTM & PRODUCT CASE STUDIES -->
+    <section>
+      <div class="section-title">Notable AI GTM & Product Case Studies</div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Autonomous Inbound Lead Qualification & CRM Routing Engine</span> | <span class="item-company">Marcus Vance Automotive</span>
+          </div>
+          <span class="item-date">n8n / HubSpot / LLM</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Situation & Friction:</strong> Manual lead triage took 4+ hours, resulting in lead decay, human data-entry errors, and lost customer deals.</li>
+          <li><strong>Product Architecture:</strong> Architected a multi-branch n8n workflow that intercepts incoming web forms, performs zero-hallucination structured entity extraction, applies deterministic pricing logic, creates HubSpot deals, and auto-dispatches personalized quotes in under 45 seconds.</li>
+          <li><strong>Measurable Impact:</strong> Slashed lead response time from 4 hours to 45 seconds (99% reduction) with a 0% error rate and automated advisor alerts.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Conversational AI Voice Sales Agent</span> | <span class="item-company">GText Homes Real Estate Prototype</span>
+          </div>
+          <span class="item-date">ElevenLabs / Twilio / Webhooks</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Situation & Friction:</strong> High-ticket real estate sales reps lost prospective buyers during off-peak hours and spent excessive time qualifying low-intent leads.</li>
+          <li><strong>Product Architecture:</strong> Designed and prototyped a sub-second latency conversational AI voice agent using ElevenLabs, Twilio VoIP, and webhook pipelines for 24/7 lead qualification, property intent mapping, and automatic CRM synchronization.</li>
+          <li><strong>Measurable Impact:</strong> Enabled continuous 24/7 qualification with zero human response latency and automated calendar booking.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Automated Lifecycle Ops & Notification Pipeline</span> | <span class="item-company">The Visionary Nation</span>
+          </div>
+          <span class="item-date">n8n / Google Workspace API</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Situation & Friction:</strong> High manual friction and account ban risks associated with direct bulk messaging during community onboarding and lifecycle updates.</li>
+          <li><strong>Product Architecture:</strong> Orchestrated an automated intake and notification pipeline in n8n connecting Google Forms, Google Sheets API, and Gmail with deterministic data validation and formatting.</li>
+          <li><strong>Measurable Impact:</strong> Eliminated manual messaging workload, achieving 100% on-time dispatch and delivering daily 7:00 PM executive summaries.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & CAMPUS COMMUNITY EXPERIENCE -->
+    <section>
+      <div class="section-title">Leadership & Campus Community Experience</div>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Class Representative</span> | <span class="item-company">Mechatronics Engineering Department, FUTA</span>
+          </div>
+          <span class="item-date">2023 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Elected official academic representative and communication bridge between faculty administration and 43 Mechatronics Engineering undergraduates.</li>
+          <li>Coordinated departmental lecture schedules, laboratory sessions, workshop practicals, and conflict-resolution processes, ensuring 100% academic alignment.</li>
+          <li>Initiated departmental peer-learning circles for programming and engineering mechanics to support struggling students.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Lead Organizer & Cross-Functional Director</span> | <span class="item-company">Mt Babs Foundation Scholars Community</span>
+          </div>
+          <span class="item-date">2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Directed an end-to-end educational leadership webinar, managing a 17-member student committee across Publicity, Speaker Briefing, Technical Infrastructure, and Registration.</li>
+          <li>Implemented automated post-event follow-up documentation, participant surveys, and resource packages, achieving a 100% attendee satisfaction score across 30 scholars.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Lead Convener & Program Director</span> | <span class="item-company">FUTA 400-Level Career & Defense Preparation Seminar</span>
+          </div>
+          <span class="item-date">2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Conceived, organized, and directed a 2-day virtual seminar for 77 penultimate-year engineering students focused on competitive Industrial Training (IT) placements and project defence execution.</li>
+          <li>Built targeted broadcast distribution funnels, achieving a 95%+ attendance retention rate across both seminar days.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HONORS, AWARDS & CERTIFICATIONS -->
+    <section>
+      <div class="section-title">Honors, Awards & Certifications</div>
+      <ul class="bullet-list">
+        <li><strong>Best Female Student Award:</strong> School of Engineering and Engineering Technology, FUTA (SEET / FUTANA)</li>
+        <li><strong>Mt Babs Foundation Merit Scholarship Award:</strong> Prestigious academic scholarship awarded to top 1% STEM undergraduates</li>
+        <li><strong>Certificate of Excellence in Engineering Oratory:</strong> Departmental Technical Presentation & Speaking Contest</li>
+        <li><strong>Content Marketing Certification:</strong> Comprehensive credential covering Inbound Marketing, Copywriting & Audience Engagement</li>
+        <li><strong>Social Media Strategy & Community Growth Coursework:</strong> Frontline user acquisition and organic distribution</li>
+        <li><strong>Verified Portfolio & Credentials:</strong> <a href="https://bit.ly/Adediwuracertificates" target="_blank" style="color: var(--accent); font-weight: 600;">https://bit.ly/Adediwuracertificates</a></li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>

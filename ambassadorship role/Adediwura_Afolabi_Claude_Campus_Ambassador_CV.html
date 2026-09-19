@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adediwura Afolabi - Claude Campus Ambassador CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-serif: 'Lora', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --primary: #000000;
+      --accent: #C15332; /* Anthropic Terracotta */
+      --accent-anthropic: #C15332;
+      --text: #000000;
+      --text-muted: #000000;
+      --border: #C15332;
+      --border-accent: #C15332;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-serif);
+      color: #000000;
+      background-color: #f8fafc;
+      line-height: 1.5;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 32px auto;
+      background: #ffffff;
+      padding: 44px 50px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border-radius: 4px;
+    }
+
+    .actions-bar {
+      max-width: 820px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: var(--font-sans);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      background-color: var(--accent);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn:hover {
+      background-color: #A84325;
+    }
+
+    .btn-secondary {
+      background-color: #f1f5f9;
+      color: #000000;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e2e8f0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #000000;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .target-role {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .sub-role {
+      font-size: 12.5px;
+      color: #000000;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .contact-links {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: #000000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .contact-links span {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .contact-links a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .contact-links a:hover {
+      text-decoration: none;
+    }
+
+    .separator {
+      color: var(--accent);
+      margin: 0 4px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    .summary-text {
+      text-align: justify;
+      color: #000000;
+      line-height: 1.55;
+    }
+
+    .item {
+      margin-bottom: 12px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    .item-company {
+      font-style: italic;
+      color: #000000;
+    }
+
+    .item-date {
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      color: #000000;
+      font-weight: 600;
+    }
+
+    ul.bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 4px;
+    }
+
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 4px;
+      color: #000000;
+      line-height: 1.45;
+    }
+
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 3px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    ul.bullet-list li strong {
+      color: #000000;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .skill-line {
+      line-height: 1.45;
+      color: #000000;
+    }
+
+    .skill-line strong {
+      color: #000000;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .actions-bar {
+        display: none !important;
+      }
+
+      .page {
+        margin: 0;
+        padding: 20px 28px;
+        box-shadow: none;
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 22px;
+        margin-bottom: 2px;
+      }
+
+      .section-title {
+        font-size: 12px;
+        margin-bottom: 6px;
+        padding-bottom: 2px;
+      }
+
+      .item {
+        margin-bottom: 8px;
+      }
+
+      ul.bullet-list li {
+        margin-bottom: 3px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="actions-bar">
+    <button class="btn" onclick="window.print()">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+        <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+      </svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="page">
+    <header>
+      <h1>Adediwura Afolabi</h1>
+      <div class="target-role">Claude Campus Ambassador Candidate | Undergraduate Lead — Claude Builder Club</div>
+      <div class="sub-role">Mechatronics Engineering Undergraduate (4.70/5.00 CGPA) • AI Product Marketing & Automation Builder • Campus Community Leader</div>
+      <div class="contact-links">
+        <span>Akure, Ondo State, Nigeria</span>
+        <span class="separator">•</span>
+        <span>+234 816 555 3106</span>
+        <span class="separator">•</span>
+        <span><a href="mailto:adediwura.ainaafolabi@gmail.com">adediwura.ainaafolabi@gmail.com</a></span>
+        <span class="separator">•</span>
+        <span><a href="https://linkedin.com/in/adediwura-afolabi" target="_blank">LinkedIn</a></span>
+        <span class="separator">•</span>
+        <span><a href="https://bit.ly/Adediwuracertificates" target="_blank">Portfolio & Certificates</a></span>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary-text">
+        Results-driven Mechatronics Engineering undergraduate at the Federal University of Technology Akure (FUTA) with a First-Class academic standing (<strong>4.70/5.00 CGPA, Top Female Engineering Student</strong>) and deep expertise in AI building, workflow orchestration, and campus community leadership. Experienced in deploying autonomous AI pipelines with Anthropic Claude, prompt engineering, and deterministic guardrails, alongside spearheading university-level student communities and technical webinars impacting over <strong>500+ tertiary students</strong>. Passionate about empowering student developers, running hands-on hackathons and demo nights, and fostering AI fluency as the Undergraduate Lead for the FUTA Claude Builder Club in direct partnership with Anthropic.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <div class="section-title">Education</div>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Bachelor of Engineering (B.Eng.) in Mechatronics Engineering</span>
+            <span class="item-company"> — Federal University of Technology Akure (FUTA)</span>
+          </div>
+          <span class="item-date">June 2023 – Nov 2027 (Expected)</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Cumulative GPA:</strong> <strong>4.70 / 5.00</strong> (First Class Honours Standing)</li>
+          <li><strong>Academic Honors:</strong> Best Female Student Award, School of Engineering & Engineering Technology (FUTANA / SEET)</li>
+          <li><strong>Departmental Leadership:</strong> Elected Class Representative, Mechatronics Engineering Department (Cohort of 43 Students)</li>
+          <li><strong>Scholarships:</strong> Mt Babs Foundation Merit Scholarship Award Recipient</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Core Skills & Competencies -->
+    <section>
+      <div class="section-title">Core Competencies & Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-line">
+          <strong>AI & Builder Stack:</strong> Anthropic Claude (Claude 3.5 Sonnet, Haiku, Opus, Claude Code CLI), Prompt Engineering & System Design, LLM Structured Outputs (JSON Schema Validation), Zero-Hallucination Guardrails, Agentic Workflows & Tool Use, API Integration (Claude API, ElevenLabs, Twilio), n8n Workflow Orchestration, Python Basics, Webhooks.
+        </div>
+        <div class="skill-line">
+          <strong>Campus Community & Event Leadership:</strong> Club Incubation & Community Architecture, Technical Workshop Facilitation, Hackathon & Demo Night Coordination, Speaker Engagement & Briefing, Cross-Functional Team Leadership (Teams of 17+), Student Mentorship & Peer Tutoring.
+        </div>
+        <div class="skill-line">
+          <strong>Developer Relations & Technical Storytelling:</strong> Technical Documentation, Translating Complex AI Mechanics for Multi-Disciplinary Audiences, Product Demonstrations, Academic Resource Curation, Oratory & Public Speaking.
+        </div>
+        <div class="skill-line">
+          <strong>Growth Marketing & Community Operations:</strong> Multi-Channel Launch Campaigns (WhatsApp, LinkedIn, Instagram, TikTok), On-Page SEO & Content Strategy, Registration Funnel Optimization, Google Workspace (Docs, Sheets, Drive, Forms), Canva Graphic Design (Lora Standard), Slack & Discord Community Management.
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Leadership & Community Event Experience -->
+    <section>
+      <div class="section-title">Campus Leadership & Community Event Experience</div>
+      
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Lead Organizer & Cross-Functional Director</span>
+            <span class="item-company"> — Mt Babs Foundation Scholars Community</span>
+          </div>
+          <span class="item-date">2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Cross-Functional Leadership:</strong> Spearheaded and managed an end-to-end educational leadership webinar for the Mt Babs Foundation Scholars community, directly leading a 17-member cross-functional student committee.</li>
+          <li><strong>Operational Divisions:</strong> Directed 5 distinct operational divisions: Publicity & Marketing, Speaker Engagement, Technical Operations, Registration & Documentation, and Seminar Coordination.</li>
+          <li><strong>Execution & Impact:</strong> Managed speaker briefing decks, technical dry runs, and virtual stage management, ensuring seamless delivery and impacting 30 tertiary scholars across multiple universities.</li>
+          <li><strong>Post-Event Engagement:</strong> Implemented automated post-event documentation, attendee feedback tracking, and digital resource kits, achieving a 100% attendee satisfaction score with zero technical downtime.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Lead Convener & Academic Program Lead</span>
+            <span class="item-company"> — FUTA 400-Level Career & Defense Preparation Seminar</span>
+          </div>
+          <span class="item-date">2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Academic Masterclass:</strong> Conceived, organized, and hosted a high-impact, 2-day virtual technical seminar for 77 penultimate-year (400-level) engineering and tertiary students.</li>
+          <li><strong>Curriculum Design:</strong> Curated sessions focused on securing competitive Industrial Training (IT) placements in engineering firms and successfully preparing for and defending undergraduate research projects.</li>
+          <li><strong>Audience Mobilization:</strong> Built targeted WhatsApp broadcast funnels and peer-to-peer campus outreach campaigns, achieving a 95%+ attendance retention rate across both days.</li>
+          <li><strong>Resource Kits:</strong> Authored and distributed comprehensive preparation guides, defense templates, and evaluation rubrics to all 77 participating students.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Academic Programs & Community Outreach Volunteer</span>
+            <span class="item-company"> — BootClass Academic Community</span>
+          </div>
+          <span class="item-date">Feb 2023 – Jan 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Marathon Revision Classes:</strong> Co-organized 3 campus-wide "Marathon Revision Classes" reaching hundreds of university students across core STEM curricula, directly contributing to a 60% boost in participant pass and excellence rates.</li>
+          <li><strong>Peer Tutoring & Resource Curation:</strong> Organized weekly peer tutorials, curated technical revision packs, and managed distribution pipelines delivering academic resources to 200+ undergraduate students.</li>
+          <li><strong>Examspiration Campaign:</strong> Conceived and authored the "21 Days of Examspiration" campaign—a structured daily motivational and study-strategy digital series designed to sustain academic focus during semester examinations.</li>
+          <li><strong>Publicity & Asset Design:</strong> Designed high-converting promotional banners and social flyers using Canva, maintaining high visual standards and brand consistency.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Class Representative</span>
+            <span class="item-company"> — Mechatronics Engineering Department, FUTA</span>
+          </div>
+          <span class="item-date">2023 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Faculty-Student Bridge:</strong> Elected official student representative and communication bridge between faculty leadership and 43 Mechatronics Engineering undergraduates.</li>
+          <li><strong>Academic Coordination:</strong> Coordinated departmental lecture schedules, laboratory sessions, workshop practicals, and conflict-resolution processes, ensuring 100% academic alignment.</li>
+          <li><strong>Peer Learning Circles:</strong> Initiated departmental peer-learning circles for programming and engineering mechanics to support struggling students.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- AI Building & Product Marketing Experience -->
+    <section>
+      <div class="section-title">AI Building & Product Marketing Experience</div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">AI Product Marketing Manager & Automation Builder</span>
+            <span class="item-company"> — Contract / Freelance</span>
+          </div>
+          <span class="item-date">2025 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Autonomous Agent Workflows:</strong> Architect and deploy production agentic workflows connecting LLMs (Claude, GPT), REST APIs, webhooks, and CRM databases to accelerate go-to-market execution.</li>
+          <li><strong>Zero-Hallucination Pipelines:</strong> Engineered autonomous lead qualification and triage pipelines in n8n utilizing structured JSON extraction, sensitivity quarantine filters, and deterministic pricing logic to eliminate LLM hallucinations.</li>
+          <li><strong>Conversational Voice AI:</strong> Prototyped sub-second latency conversational AI voice agents integrating ElevenLabs voice models and Twilio telephony for real-time customer intent discovery and CRM updates.</li>
+          <li><strong>Product Marketing & Positioning:</strong> Synthesize technical capabilities into clear, high-converting product positioning, messaging hierarchies, and feature-benefit documentation.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Corporate Communications & Technical Content Intern</span>
+            <span class="item-company"> — BootClass</span>
+          </div>
+          <span class="item-date">Feb 2023 – Jan 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Technical Communications:</strong> Authored technical documentation, operational reports, and multi-format learning resources explaining complex engineering and software concepts to students.</li>
+          <li><strong>Knowledge Management:</strong> Standardized internal documentation systems, improving cross-functional information accessibility and institutional knowledge retention.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Digital Growth Lead & Social Media Strategist</span>
+            <span class="item-company"> — Ovie’s Kitchen & Flowery Nectar Honey</span>
+          </div>
+          <span class="item-date">Apr 2025 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Funnel Conversion:</strong> Built end-to-end digital acquisition funnels, producing 20+ short-form educational and commercial video assets per month across Instagram and TikTok.</li>
+          <li><strong>Commercial Revenue Impact:</strong> Generated over 520 qualified inbound inquiries and directly converted 250+ paid commercial orders within a 3-month campaign window.</li>
+          <li><strong>On-Page SEO & Discovery:</strong> Conducted search engine optimization (SEO) audits on digital profiles, elevating on-page discoverability and inbound search rankings.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Mechanical & Systems Engineering Intern</span>
+            <span class="item-company"> — Smart Systems Research Laboratory (SSRL)</span>
+          </div>
+          <span class="item-date">Sept 2025 – Oct 2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Technical Documentation:</strong> Developed structured technical documentation, CAD presentations, and simulation reports for mechatronics prototypes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Notable AI & Automation Projects -->
+    <section>
+      <div class="section-title">Notable AI & Automation Projects</div>
+      <ul class="bullet-list">
+        <li><strong>Autonomous AI Intake & Lead Qualification Engine:</strong> Production-ready multi-branch n8n workflow that intercepts inbound inquiries, generates fail-safe CRM tickets in HubSpot, performs zero-hallucination structured entity extraction, and dispatches automated quotes in under 45 seconds (slashed from 4+ hours).</li>
+        <li><strong>Conversational Voice AI Telephony Agent:</strong> Low-latency conversational voice prototype engineered with ElevenLabs, Twilio VoIP, and webhook pipelines for 24/7 client qualification, budget discovery, and real-time CRM synchronization.</li>
+        <li><strong>Automated Community Lifecycle Engine:</strong> Data normalization engine built with n8n and Google Sheets API that cleans and deduplicates multi-source records, standardizing international contact schemas and executing automated daily executive digests.</li>
+      </ul>
+    </section>
+
+    <!-- Awards & Certifications -->
+    <section>
+      <div class="section-title">Awards, Honors & Recognition</div>
+      <ul class="bullet-list">
+        <li><strong>Best Female Student Award:</strong> School of Engineering and Engineering Technology, FUTA (FUTANA / SEET)</li>
+        <li><strong>Mt Babs Foundation Scholarship Award:</strong> Highly competitive merit-based undergraduate scholarship</li>
+        <li><strong>Certificate of Excellence in Engineering Oratory:</strong> Departmental Technical Presentation Contest</li>
+        <li><strong>Most Social Volunteer Award:</strong> BootClass Community Honors</li>
+        <li><strong>Verified Portfolio & Credentials:</strong> <a href="https://bit.ly/Adediwuracertificates" target="_blank">https://bit.ly/Adediwuracertificates</a></li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>
