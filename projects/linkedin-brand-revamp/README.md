@@ -9,8 +9,9 @@
 - [`profile-strategy-and-copy.md`](./profile-strategy-and-copy.md) — Master file containing finalized Headline, Combined About Section, Experience bullet points, Credentials, Banner Blueprint, and Featured Post.
 - [`banner-showcase.html`](./banner-showcase.html) — Interactive HTML showcase with live preview, avatar safe zone validation, and 1-click downloads.
 - **Rendered Banners:**
-  - Option 1 (Warm Architectural Linen): [`assets/banners/linkedin-banner-warm-architectural-1584x396.png`](./assets/banners/linkedin-banner-warm-architectural-1584x396.png) | [2x Retina](./assets/banners/linkedin-banner-warm-architectural-1584x396@2x.png) | [Vector SVG](./assets/banners/linkedin-banner-warm-architectural-1584x396.svg)
-  - Option 2 (Dark Tech Obsidian): [`assets/banners/linkedin-banner-dark-tech-1584x396.png`](./assets/banners/linkedin-banner-dark-tech-1584x396.png) | [2x Retina](./assets/banners/linkedin-banner-dark-tech-1584x396@2x.png) | [Vector SVG](./assets/banners/linkedin-banner-dark-tech-1584x396.svg)
+  - **Flagship (Crisp White & Emerald Green - High Contrast Readability):** [`assets/banners/linkedin-banner-white-emerald-1584x396.png`](./assets/banners/linkedin-banner-white-emerald-1584x396.png) | [2x Retina](./assets/banners/linkedin-banner-white-emerald-1584x396@2x.png) | [Vector SVG](./assets/banners/linkedin-banner-white-emerald-1584x396.svg) | [Root Shortcut](../../linkedin-banner.png)
+  - Option 2 (Warm Architectural Linen): [`assets/banners/linkedin-banner-warm-architectural-1584x396.png`](./assets/banners/linkedin-banner-warm-architectural-1584x396.png) | [2x Retina](./assets/banners/linkedin-banner-warm-architectural-1584x396@2x.png) | [Vector SVG](./assets/banners/linkedin-banner-warm-architectural-1584x396.svg)
+  - Option 3 (Dark Tech Obsidian): [`assets/banners/linkedin-banner-dark-tech-1584x396.png`](./assets/banners/linkedin-banner-dark-tech-1584x396.png) | [2x Retina](./assets/banners/linkedin-banner-dark-tech-1584x396@2x.png) | [Vector SVG](./assets/banners/linkedin-banner-dark-tech-1584x396.svg)
 
 
 ## Finalized Master "About" Section

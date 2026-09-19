@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adediwura Afolabi - LinkedIn Banner Showcase & Downloads</title>
+  <title>Adediwura Afolabi — LinkedIn Banner Suite & Downloads</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,10 +11,13 @@
     :root {
       --font-serif: 'Lora', Georgia, serif;
       --font-sans: 'Inter', -apple-system, sans-serif;
-      --accent: #C85A32;
-      --bg: #F8F9FA;
+      --emerald: #047857;
+      --emerald-light: #ECFDF5;
+      --emerald-border: #10B981;
+      --bg: #F8FAFC;
       --card-bg: #FFFFFF;
-      --text: #1C1614;
+      --text: #0F172A;
+      --text-muted: #475569;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,34 +40,87 @@
       margin-bottom: 40px;
     }
 
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--emerald);
+      background: var(--emerald-light);
+      border: 1px solid var(--emerald-border);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
     h1 {
       font-family: var(--font-serif);
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 700;
-      color: #1C1614;
+      color: var(--text);
       margin-bottom: 8px;
     }
 
     .subtitle {
       font-size: 15px;
-      color: #666;
-      max-width: 700px;
+      color: var(--text-muted);
+      max-width: 760px;
       margin: 0 auto;
+    }
+
+    .controls-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 30px;
+      background: #FFFFFF;
+      padding: 12px 24px;
+      border-radius: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid #E2E8F0;
+    }
+
+    .switch-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .switch-label input {
+      accent-color: var(--emerald);
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
     }
 
     .banner-card {
       background: var(--card-bg);
-      border-radius: 12px;
-      padding: 28px;
+      border-radius: 16px;
+      padding: 32px;
       margin-bottom: 40px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      border: 1px solid #EAEAEA;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+      border: 1px solid #E2E8F0;
+      position: relative;
+    }
+
+    .banner-card.flagship {
+      border: 2px solid #10B981;
+      box-shadow: 0 8px 32px rgba(16, 185, 129, 0.12);
     }
 
     .card-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 20px;
       flex-wrap: wrap;
       gap: 12px;
@@ -72,40 +128,49 @@
 
     .card-title {
       font-family: var(--font-serif);
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
-      color: #1C1614;
+      color: var(--text);
     }
 
     .card-badge {
       font-size: 12px;
-      font-weight: 600;
-      padding: 4px 12px;
+      font-weight: 700;
+      padding: 6px 14px;
       border-radius: 20px;
-      background: #EFE8DE;
-      color: #5C4F42;
+      background: var(--emerald-light);
+      color: var(--emerald);
+      border: 1px solid #A7F3D0;
+    }
+
+    .card-badge.warm {
+      background: #F4EFE6;
+      color: #C85A32;
+      border: 1px solid #E2D9CC;
     }
 
     .card-badge.dark {
-      background: #252B35;
+      background: #0F172A;
       color: #E2744B;
+      border: 1px solid #334155;
     }
 
-    .preview-container {
+    .preview-wrapper {
       position: relative;
       width: 100%;
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
-      border: 1px solid #E0D9CE;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-      background: #eee;
+      border: 1px solid #E2E8F0;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      background: #FFFFFF;
     }
 
-    .preview-container img {
+    .preview-wrapper img {
       width: 100%;
       height: auto;
       display: block;
+      cursor: zoom-in;
     }
 
     /* Mock Profile Photo Overlay to demonstrate safe zone */
@@ -117,9 +182,10 @@
       height: 110px;
       border-radius: 50%;
       border: 4px solid #FFFFFF;
-      background: #C85A32;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      background: #047857;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       color: #FFFFFF;
@@ -128,13 +194,21 @@
       text-align: center;
       line-height: 1.2;
       z-index: 2;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .avatar-mockup.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.9);
     }
 
     .avatar-mockup span {
       opacity: 0.9;
-      font-size: 10px;
+      font-size: 9.5px;
       display: block;
       font-weight: 500;
+      margin-top: 2px;
     }
 
     .btn-group {
@@ -147,49 +221,77 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-size: 13.5px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 14px;
       font-weight: 600;
       text-decoration: none;
       cursor: pointer;
-      transition: all 0.15s ease;
+      transition: all 0.2s ease;
       border: none;
     }
 
-    .btn-primary {
-      background: #C85A32;
-      color: #FFF;
+    .btn-emerald {
+      background: #047857;
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(4, 120, 87, 0.25);
     }
 
-    .btn-primary:hover {
-      background: #A84325;
+    .btn-emerald:hover {
+      background: #065F46;
+      transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: #F1F3F5;
-      color: #1C1614;
-      border: 1px solid #D0D5DD;
+      background: #F1F5F9;
+      color: #0F172A;
+      border: 1px solid #CBD5E1;
     }
 
     .btn-secondary:hover {
-      background: #E4E7EC;
+      background: #E2E8F0;
+      transform: translateY(-1px);
     }
 
     .specs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
-      margin-top: 20px;
+      margin-top: 24px;
       padding-top: 20px;
-      border-top: 1px solid #F0ECE4;
-      font-size: 13px;
+      border-top: 1px solid #F1F5F9;
+      font-size: 13.5px;
     }
 
     .spec-item strong {
-      color: #1C1614;
+      color: var(--text);
       display: block;
       margin-bottom: 2px;
+    }
+
+    .instructions-card {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid #E2E8F0;
+      margin-top: 20px;
+    }
+
+    .instructions-card h3 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .instructions-card ol {
+      margin-left: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .instructions-card li {
+      margin-bottom: 8px;
     }
   </style>
 </head>
@@ -197,23 +299,34 @@
 
   <div class="container">
     <header>
+      <div class="eyebrow">AI Product Marketing Manager • LinkedIn Revamp</div>
       <h1>Adediwura Afolabi — LinkedIn Banner Suite</h1>
-      <p class="subtitle">Custom engineered for your AI Product Marketing Manager rebrand. Optimized for standard desktop and mobile LinkedIn viewports with zero avatar collision.</p>
+      <p class="subtitle">Custom engineered with high-contrast Green &amp; Black typography on a crisp white background for instant readability at first glance. Strictly validated against avatar collisions.</p>
     </header>
 
-    <!-- OPTION 1: WARM ARCHITECTURAL LINEN -->
-    <div class="banner-card">
+    <div class="controls-bar">
+      <label class="switch-label">
+        <input type="checkbox" id="toggleAvatar" checked onchange="toggleAvatarOverlay(this.checked)">
+        Show LinkedIn Profile Photo Safe-Zone Overlay
+      </label>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- FLAGSHIP EDITION: WHITE & EMERALD TECH EDITION            -->
+    <!-- ========================================================= -->
+    <div class="banner-card flagship">
       <div class="card-header">
         <div>
-          <div class="card-title">Option 1: Warm Architectural Linen (Recommended)</div>
-          <p style="font-size: 13px; color: #666; margin-top: 2px;">Direct translation of reference asset (<code>image (1).png</code>) with signature Lora serif &amp; warm terracotta accents.</p>
+          <div class="card-title">Flagship Edition: Crisp White &amp; Emerald Tech (Recommended)</div>
+          <p style="font-size: 13.5px; color: #475569; margin-top: 4px;">
+            High-contrast crisp white background, rich slate black primary copy, and vivid emerald green for emphasis words, arrows, metrics, and badges. 100% readable at first glance.
+          </p>
         </div>
-        <span class="card-badge">Ref: image (1).png Style</span>
+        <span class="card-badge">★ Recommended Flagship</span>
       </div>
 
-      <div class="preview-container">
-        <img src="./assets/banners/linkedin-banner-warm-architectural-1584x396.png" alt="LinkedIn Banner Warm Architectural">
-        <!-- Mock Avatar to show safe zone -->
+      <div class="preview-wrapper">
+        <img id="flagship-img" src="./assets/banners/linkedin-banner-white-emerald-1584x396.png" alt="LinkedIn Banner White & Emerald Green">
         <div class="avatar-mockup">
           Profile<br>Photo
           <span>Safe Zone OK</span>
@@ -222,13 +335,13 @@
 
       <div class="card-header" style="margin-bottom: 0;">
         <div class="btn-group">
-          <a class="btn btn-primary" href="./assets/banners/linkedin-banner-warm-architectural-1584x396.png" download="Adediwura-Afolabi-LinkedIn-Banner-Warm-1584x396.png">
-            ⬇ Download 1584x396 PNG (Recommended)
+          <a class="btn btn-emerald" href="./assets/banners/linkedin-banner-white-emerald-1584x396.png" download="Adediwura-Afolabi-LinkedIn-Banner-1584x396.png">
+            ⬇ Download 1584×396 PNG (LinkedIn Standard)
           </a>
-          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-warm-architectural-1584x396@2x.png" download="Adediwura-Afolabi-LinkedIn-Banner-Warm-3168x792-Retina.png">
-            ⬇ Download 2x Retina PNG (3168x792)
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-white-emerald-1584x396@2x.png" download="Adediwura-Afolabi-LinkedIn-Banner-3168x792-Retina.png">
+            ⬇ Download 2x Retina PNG (3168×792 Ultra-Crisp)
           </a>
-          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-warm-architectural-1584x396.svg" download="Adediwura-Afolabi-LinkedIn-Banner-Warm.svg">
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-white-emerald-1584x396.svg" download="Adediwura-Afolabi-LinkedIn-Banner-Vector.svg">
             ⬇ Download Vector SVG
           </a>
         </div>
@@ -236,33 +349,37 @@
 
       <div class="specs-grid">
         <div class="spec-item">
-          <strong>Dimensions:</strong> 1584 × 396 px (Exact 4:1)
+          <strong>Dimensions:</strong> 1584 × 396 px (and 3168 × 792 px Retina)
         </div>
         <div class="spec-item">
-          <strong>Primary Fonts:</strong> Lora (700 Bold), Inter (500/600)
+          <strong>Typography:</strong> Lora (700 Serif Headline), Inter (Clean UI &amp; Badges)
         </div>
         <div class="spec-item">
-          <strong>Palette:</strong> Linen Cream <code>#F5F2EB</code>, Terracotta <code>#C85A32</code>, Espresso <code>#1C1614</code>
+          <strong>Palette:</strong> Pure White <code>#FFFFFF</code>, Emerald Green <code>#047857</code>, Slate Black <code>#0F172A</code>
         </div>
         <div class="spec-item">
-          <strong>Avatar Collision:</strong> 0% (Tree elevated to upper-left quadrant)
+          <strong>Avatar Clearance:</strong> 48px vertical safety margin above avatar
         </div>
       </div>
     </div>
 
-    <!-- OPTION 2: DARK TECH OBSIDIAN -->
+    <!-- ========================================================= -->
+    <!-- ALTERNATIVE 1: WARM ARCHITECTURAL LINEN                   -->
+    <!-- ========================================================= -->
     <div class="banner-card">
       <div class="card-header">
         <div>
-          <div class="card-title">Option 2: Dark Tech Obsidian</div>
-          <p style="font-size: 13px; color: #666; margin-top: 2px;">Executive dark-mode edition for developer tools, technical infrastructure, and AI engineering focus.</p>
+          <div class="card-title">Alternative Option: Warm Architectural Linen</div>
+          <p style="font-size: 13.5px; color: #475569; margin-top: 4px;">
+            Warm linen paper tone with terracotta accent, inspired by architectural sketches.
+          </p>
         </div>
-        <span class="card-badge dark">Dark Mode Edition</span>
+        <span class="card-badge warm">Warm Linen Tone</span>
       </div>
 
-      <div class="preview-container">
-        <img src="./assets/banners/linkedin-banner-dark-tech-1584x396.png" alt="LinkedIn Banner Dark Tech">
-        <div class="avatar-mockup" style="border-color: #0E1013;">
+      <div class="preview-wrapper">
+        <img src="./assets/banners/linkedin-banner-warm-architectural-1584x396.png" alt="LinkedIn Banner Warm Architectural">
+        <div class="avatar-mockup" style="background: #C85A32;">
           Profile<br>Photo
           <span>Safe Zone OK</span>
         </div>
@@ -270,35 +387,76 @@
 
       <div class="card-header" style="margin-bottom: 0;">
         <div class="btn-group">
-          <a class="btn btn-primary" href="./assets/banners/linkedin-banner-dark-tech-1584x396.png" download="Adediwura-Afolabi-LinkedIn-Banner-Dark-1584x396.png">
-            ⬇ Download 1584x396 PNG
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-warm-architectural-1584x396.png" download="Adediwura-Afolabi-LinkedIn-Banner-Warm-1584x396.png">
+            ⬇ Download 1584×396 PNG
           </a>
-          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-dark-tech-1584x396@2x.png" download="Adediwura-Afolabi-LinkedIn-Banner-Dark-3168x792-Retina.png">
-            ⬇ Download 2x Retina PNG (3168x792)
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-warm-architectural-1584x396@2x.png" download="Adediwura-Afolabi-LinkedIn-Banner-Warm-Retina.png">
+            ⬇ Download 2x Retina PNG
           </a>
-          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-dark-tech-1584x396.svg" download="Adediwura-Afolabi-LinkedIn-Banner-Dark.svg">
-            ⬇ Download Vector SVG
-          </a>
-        </div>
-      </div>
-
-      <div class="specs-grid">
-        <div class="spec-item">
-          <strong>Dimensions:</strong> 1584 × 396 px (Exact 4:1)
-        </div>
-        <div class="spec-item">
-          <strong>Primary Fonts:</strong> Lora (700 Bold), Inter (500/600)
-        </div>
-        <div class="spec-item">
-          <strong>Palette:</strong> Obsidian <code>#0E1013</code>, Warm Ember <code>#E2744B</code>, Crisp White <code>#FFFFFF</code>
-        </div>
-        <div class="spec-item">
-          <strong>Avatar Collision:</strong> 0% (Tree elevated to upper-left quadrant)
         </div>
       </div>
     </div>
 
+    <!-- ========================================================= -->
+    <!-- ALTERNATIVE 2: DARK TECH OBSIDIAN                         -->
+    <!-- ========================================================= -->
+    <div class="banner-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Alternative Option: Dark Tech Obsidian</div>
+          <p style="font-size: 13.5px; color: #475569; margin-top: 4px;">
+            Deep obsidian background with warm amber highlights for dark-mode developer aesthetics.
+          </p>
+        </div>
+        <span class="card-badge dark">Dark Mode</span>
+      </div>
+
+      <div class="preview-wrapper">
+        <img src="./assets/banners/linkedin-banner-dark-tech-1584x396.png" alt="LinkedIn Banner Dark Tech">
+        <div class="avatar-mockup" style="background: #E2744B; border-color: #0F172A;">
+          Profile<br>Photo
+          <span>Safe Zone OK</span>
+        </div>
+      </div>
+
+      <div class="card-header" style="margin-bottom: 0;">
+        <div class="btn-group">
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-dark-tech-1584x396.png" download="Adediwura-Afolabi-LinkedIn-Banner-Dark-1584x396.png">
+            ⬇ Download 1584×396 PNG
+          </a>
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-dark-tech-1584x396@2x.png" download="Adediwura-Afolabi-LinkedIn-Banner-Dark-Retina.png">
+            ⬇ Download 2x Retina PNG
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSTRUCTIONS -->
+    <div class="instructions-card">
+      <h3>Quick LinkedIn Upload Instructions</h3>
+      <ol>
+        <li>Click the green button above: <strong>"Download 1584×396 PNG"</strong> (or the 2x Retina PNG for 4K/Retina displays).</li>
+        <li>Open your LinkedIn profile in your web browser.</li>
+        <li>Click the <strong>Camera icon</strong> located at the top-right corner of your current banner area.</li>
+        <li>Select the downloaded PNG file (<code>Adediwura-Afolabi-LinkedIn-Banner-1584x396.png</code>).</li>
+        <li>Ensure no crop adjustment is needed (the banner is already custom-ratioed to exact 1584 × 396 px) and click <strong>Apply / Save</strong>.</li>
+      </ol>
+    </div>
+
   </div>
+
+  <script>
+    function toggleAvatarOverlay(show) {
+      const mockups = document.querySelectorAll('.avatar-mockup');
+      mockups.forEach(el => {
+        if (show) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
