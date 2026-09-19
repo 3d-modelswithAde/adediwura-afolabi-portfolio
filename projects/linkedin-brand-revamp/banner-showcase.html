@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adediwura Afolabi - LinkedIn Banner Showcase & Downloads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-serif: 'Lora', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --accent: #C85A32;
+      --bg: #F8F9FA;
+      --card-bg: #FFFFFF;
+      --text: #1C1614;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 700;
+      color: #1C1614;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .banner-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #EAEAEA;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: #1C1614;
+    }
+
+    .card-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: #EFE8DE;
+      color: #5C4F42;
+    }
+
+    .card-badge.dark {
+      background: #252B35;
+      color: #E2744B;
+    }
+
+    .preview-container {
+      position: relative;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #E0D9CE;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      background: #eee;
+    }
+
+    .preview-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Mock Profile Photo Overlay to demonstrate safe zone */
+    .avatar-mockup {
+      position: absolute;
+      bottom: -40px;
+      left: 45px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid #FFFFFF;
+      background: #C85A32;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.2;
+      z-index: 2;
+    }
+
+    .avatar-mockup span {
+      opacity: 0.9;
+      font-size: 10px;
+      display: block;
+      font-weight: 500;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #C85A32;
+      color: #FFF;
+    }
+
+    .btn-primary:hover {
+      background: #A84325;
+    }
+
+    .btn-secondary {
+      background: #F1F3F5;
+      color: #1C1614;
+      border: 1px solid #D0D5DD;
+    }
+
+    .btn-secondary:hover {
+      background: #E4E7EC;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #F0ECE4;
+      font-size: 13px;
+    }
+
+    .spec-item strong {
+      color: #1C1614;
+      display: block;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Adediwura Afolabi — LinkedIn Banner Suite</h1>
+      <p class="subtitle">Custom engineered for your AI Product Marketing Manager rebrand. Optimized for standard desktop and mobile LinkedIn viewports with zero avatar collision.</p>
+    </header>
+
+    <!-- OPTION 1: WARM ARCHITECTURAL LINEN -->
+    <div class="banner-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Option 1: Warm Architectural Linen (Recommended)</div>
+          <p style="font-size: 13px; color: #666; margin-top: 2px;">Direct translation of reference asset (<code>image (1).png</code>) with signature Lora serif &amp; warm terracotta accents.</p>
+        </div>
+        <span class="card-badge">Ref: image (1).png Style</span>
+      </div>
+
+      <div class="preview-container">
+        <img src="./assets/banners/linkedin-banner-warm-architectural-1584x396.png" alt="LinkedIn Banner Warm Architectural">
+        <!-- Mock Avatar to show safe zone -->
+        <div class="avatar-mockup">
+          Profile<br>Photo
+          <span>Safe Zone OK</span>
+        </div>
+      </div>
+
+      <div class="card-header" style="margin-bottom: 0;">
+        <div class="btn-group">
+          <a class="btn btn-primary" href="./assets/banners/linkedin-banner-warm-architectural-1584x396.png" download="Adediwura-Afolabi-LinkedIn-Banner-Warm-1584x396.png">
+            ⬇ Download 1584x396 PNG (Recommended)
+          </a>
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-warm-architectural-1584x396@2x.png" download="Adediwura-Afolabi-LinkedIn-Banner-Warm-3168x792-Retina.png">
+            ⬇ Download 2x Retina PNG (3168x792)
+          </a>
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-warm-architectural-1584x396.svg" download="Adediwura-Afolabi-LinkedIn-Banner-Warm.svg">
+            ⬇ Download Vector SVG
+          </a>
+        </div>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item">
+          <strong>Dimensions:</strong> 1584 × 396 px (Exact 4:1)
+        </div>
+        <div class="spec-item">
+          <strong>Primary Fonts:</strong> Lora (700 Bold), Inter (500/600)
+        </div>
+        <div class="spec-item">
+          <strong>Palette:</strong> Linen Cream <code>#F5F2EB</code>, Terracotta <code>#C85A32</code>, Espresso <code>#1C1614</code>
+        </div>
+        <div class="spec-item">
+          <strong>Avatar Collision:</strong> 0% (Tree elevated to upper-left quadrant)
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 2: DARK TECH OBSIDIAN -->
+    <div class="banner-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Option 2: Dark Tech Obsidian</div>
+          <p style="font-size: 13px; color: #666; margin-top: 2px;">Executive dark-mode edition for developer tools, technical infrastructure, and AI engineering focus.</p>
+        </div>
+        <span class="card-badge dark">Dark Mode Edition</span>
+      </div>
+
+      <div class="preview-container">
+        <img src="./assets/banners/linkedin-banner-dark-tech-1584x396.png" alt="LinkedIn Banner Dark Tech">
+        <div class="avatar-mockup" style="border-color: #0E1013;">
+          Profile<br>Photo
+          <span>Safe Zone OK</span>
+        </div>
+      </div>
+
+      <div class="card-header" style="margin-bottom: 0;">
+        <div class="btn-group">
+          <a class="btn btn-primary" href="./assets/banners/linkedin-banner-dark-tech-1584x396.png" download="Adediwura-Afolabi-LinkedIn-Banner-Dark-1584x396.png">
+            ⬇ Download 1584x396 PNG
+          </a>
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-dark-tech-1584x396@2x.png" download="Adediwura-Afolabi-LinkedIn-Banner-Dark-3168x792-Retina.png">
+            ⬇ Download 2x Retina PNG (3168x792)
+          </a>
+          <a class="btn btn-secondary" href="./assets/banners/linkedin-banner-dark-tech-1584x396.svg" download="Adediwura-Afolabi-LinkedIn-Banner-Dark.svg">
+            ⬇ Download Vector SVG
+          </a>
+        </div>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item">
+          <strong>Dimensions:</strong> 1584 × 396 px (Exact 4:1)
+        </div>
+        <div class="spec-item">
+          <strong>Primary Fonts:</strong> Lora (700 Bold), Inter (500/600)
+        </div>
+        <div class="spec-item">
+          <strong>Palette:</strong> Obsidian <code>#0E1013</code>, Warm Ember <code>#E2744B</code>, Crisp White <code>#FFFFFF</code>
+        </div>
+        <div class="spec-item">
+          <strong>Avatar Collision:</strong> 0% (Tree elevated to upper-left quadrant)
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -6,7 +6,12 @@
 
 ## Core Assets in this Project
 - **Live Google Doc:** [Adediwura Afolabi - LinkedIn Profile & Strategy Document](https://docs.google.com/document/d/13KPjh0aTrCyVx35ZrFCQU2mwDXB3_Nqq49L_bhN1kME/edit)
-- [`profile-strategy-and-copy.md`](./profile-strategy-and-copy.md) — Master file containing finalized Headline, Combined About Section, Experience bullet points, Credentials, and Featured Post blueprints.
+- [`profile-strategy-and-copy.md`](./profile-strategy-and-copy.md) — Master file containing finalized Headline, Combined About Section, Experience bullet points, Credentials, Banner Blueprint, and Featured Post.
+- [`banner-showcase.html`](./banner-showcase.html) — Interactive HTML showcase with live preview, avatar safe zone validation, and 1-click downloads.
+- **Rendered Banners:**
+  - Option 1 (Warm Architectural Linen): [`assets/banners/linkedin-banner-warm-architectural-1584x396.png`](./assets/banners/linkedin-banner-warm-architectural-1584x396.png) | [2x Retina](./assets/banners/linkedin-banner-warm-architectural-1584x396@2x.png) | [Vector SVG](./assets/banners/linkedin-banner-warm-architectural-1584x396.svg)
+  - Option 2 (Dark Tech Obsidian): [`assets/banners/linkedin-banner-dark-tech-1584x396.png`](./assets/banners/linkedin-banner-dark-tech-1584x396.png) | [2x Retina](./assets/banners/linkedin-banner-dark-tech-1584x396@2x.png) | [Vector SVG](./assets/banners/linkedin-banner-dark-tech-1584x396.svg)
+
 
 ## Finalized Master "About" Section
 ```text
