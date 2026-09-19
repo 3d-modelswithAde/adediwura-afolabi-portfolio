@@ -11,21 +11,17 @@
     :root {
       --font-serif: 'Lora', Georgia, serif;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --primary: #0F172A;
-      --emerald: #047857;
-      --emerald-dark: #065F46;
-      --emerald-light: #ECFDF5;
-      --emerald-border: #A7F3D0;
-      --text: #0F172A;
-      --text-muted: #334155;
-      --border: #E2E8F0;
+      --primary: #000000;
+      --text: #000000;
+      --text-muted: #222222;
+      --border: #000000;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: var(--font-serif);
-      color: var(--text);
+      color: #000000;
       background-color: #F8FAFC;
       line-height: 1.55;
       font-size: 13.5px;
@@ -37,9 +33,9 @@
       margin: 32px auto;
       background: #FFFFFF;
       padding: 48px 52px;
-      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
-      border-radius: 8px;
-      border: 1px solid #E2E8F0;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      border: 1px solid #D0D5DD;
     }
 
     .actions-bar {
@@ -57,9 +53,9 @@
       gap: 8px;
       padding: 10px 18px;
       font-size: 13px;
-      font-weight: 600;
-      color: #FFF;
-      background-color: var(--emerald);
+      font-weight: 700;
+      color: #FFFFFF;
+      background-color: #000000;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -68,13 +64,13 @@
     }
 
     .btn:hover {
-      background-color: var(--emerald-dark);
+      background-color: #333333;
     }
 
     header {
       text-align: center;
       margin-bottom: 24px;
-      border-bottom: 2px solid var(--emerald);
+      border-bottom: 2px solid #000000;
       padding-bottom: 16px;
     }
 
@@ -82,7 +78,7 @@
       font-size: 28px;
       font-weight: 700;
       letter-spacing: 0.5px;
-      color: var(--primary);
+      color: #000000;
       margin-bottom: 4px;
       text-transform: uppercase;
     }
@@ -91,7 +87,7 @@
       font-family: var(--font-sans);
       font-size: 13px;
       font-weight: 700;
-      color: var(--emerald);
+      color: #000000;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 6px;
@@ -100,7 +96,7 @@
     .contact-links {
       font-family: var(--font-sans);
       font-size: 12px;
-      color: var(--text-muted);
+      color: #000000;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -108,13 +104,9 @@
     }
 
     .contact-links a {
-      color: var(--emerald);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-links a:hover {
+      color: #000000;
       text-decoration: underline;
+      font-weight: 600;
     }
 
     .section-title {
@@ -123,19 +115,19 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: var(--emerald);
+      color: #000000;
       margin-top: 22px;
       margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 8px;
-      border-bottom: 1px solid #CBD5E1;
+      border-bottom: 1px solid #000000;
       padding-bottom: 4px;
     }
 
-    .highlight-green {
-      color: var(--emerald);
+    .bold-emphasis {
       font-weight: 700;
+      color: #000000;
     }
 
     .entry {
@@ -152,20 +144,20 @@
 
     .entry-title {
       font-weight: 700;
-      color: var(--primary);
+      color: #000000;
     }
 
     .entry-company {
-      font-weight: 600;
-      color: #1E293B;
+      font-weight: 700;
+      color: #000000;
     }
 
     .entry-meta {
       font-family: var(--font-sans);
       font-size: 11.5px;
-      color: #64748B;
+      color: #000000;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       text-align: right;
     }
 
@@ -181,14 +173,14 @@
       margin-bottom: 6px;
       font-size: 13px;
       line-height: 1.55;
-      color: #1E293B;
+      color: #000000;
     }
 
     ul.bullet-list li::before {
       content: "•";
       position: absolute;
       left: 4px;
-      color: var(--emerald);
+      color: #000000;
       font-weight: 700;
       font-size: 14px;
     }
@@ -197,11 +189,12 @@
       font-size: 13px;
       margin-bottom: 6px;
       line-height: 1.6;
+      color: #000000;
     }
 
     .skills-category {
       font-weight: 700;
-      color: var(--primary);
+      color: #000000;
       font-family: var(--font-sans);
       font-size: 12px;
       text-transform: uppercase;
@@ -209,7 +202,7 @@
     }
 
     @media print {
-      body { background-color: #FFFFFF; font-size: 11pt; }
+      body { background-color: #FFFFFF; font-size: 11pt; color: #000000; }
       .page { box-shadow: none; border: none; margin: 0; padding: 0; max-width: 100%; }
       .actions-bar { display: none; }
     }
@@ -236,8 +229,8 @@
 
     <!-- PROFILE SUMMARY -->
     <div class="section-title">Profile Summary</div>
-    <p style="font-size: 13px; line-height: 1.6; color: #1E293B; margin-bottom: 6px;">
-      High-agency, systems-oriented Product Marketing Manager and Mechatronics Engineering undergraduate known for <span class="highlight-green">extreme task ownership</span>, rapid execution, and bridging technical complexity with market conversion. Operates with a founder-direct mindset: autonomous, proactive, and committed to full-cycle delivery from positioning discovery to customer adoption. Combines an engineering discipline with acute market empathy to craft differentiated positioning, run competitive intelligence audits, author technical whitepapers and sales enablement collateral, and alert customers of new feature releases to accelerate retention. Proven track record of taking 100% ownership of end-to-end digital operations—reactivating dormant accounts, driving inbound leads from <span class="highlight-green">0 to 520+</span>, converting <span class="highlight-green">250+ paid customer transactions</span>, and orchestrating <span class="highlight-green">17-member cross-functional teams</span> with calm crisis management and high-pressure execution.
+    <p style="font-size: 13px; line-height: 1.6; color: #000000; margin-bottom: 6px;">
+      High-agency, systems-oriented Product Marketing Manager and Mechatronics Engineering undergraduate known for <span class="bold-emphasis">extreme task ownership</span>, rapid execution, and bridging technical complexity with market conversion. Operates with a founder-direct mindset: autonomous, proactive, and committed to full-cycle delivery from positioning discovery to customer adoption. Combines an engineering discipline with acute market empathy to craft differentiated positioning, run competitive intelligence audits, author technical whitepapers and sales enablement collateral, and alert customers of new feature releases to accelerate retention. Proven track record of taking 100% ownership of end-to-end digital operations—reactivating dormant accounts, driving inbound leads from <span class="bold-emphasis">0 to 520+</span>, converting <span class="bold-emphasis">250+ paid customer transactions</span>, and orchestrating <span class="bold-emphasis">17-member cross-functional teams</span> with calm crisis management and high-pressure execution.
     </p>
 
     <!-- EDUCATION -->
@@ -260,12 +253,12 @@
     <div class="skills-block">
       <p>
         <span class="skills-category">Product Marketing &amp; GTM:</span>
-        <span class="highlight-green">Go-To-Market (GTM) Strategy &amp; Launches</span>, 
-        <span class="highlight-green">Product Positioning &amp; Value Messaging</span>, 
-        <span class="highlight-green">Competitive Intelligence &amp; Battlecards</span>, 
-        <span class="highlight-green">Sales Enablement Collateral &amp; Technical Whitepapers</span>, 
-        <span class="highlight-green">Customer Feature Adoption &amp; Release Alerts</span>, 
-        <span class="highlight-green">User Journey Mapping &amp; Funnel Optimization</span>, 
+        <span class="bold-emphasis">Go-To-Market (GTM) Strategy &amp; Launches</span>, 
+        <span class="bold-emphasis">Product Positioning &amp; Value Messaging</span>, 
+        <span class="bold-emphasis">Competitive Intelligence &amp; Battlecards</span>, 
+        <span class="bold-emphasis">Sales Enablement Collateral &amp; Technical Whitepapers</span>, 
+        <span class="bold-emphasis">Customer Feature Adoption &amp; Release Alerts</span>, 
+        <span class="bold-emphasis">User Journey Mapping &amp; Funnel Optimization</span>, 
         On-Page SEO &amp; Profile Visibility.
       </p>
       <p>
@@ -274,11 +267,11 @@
       </p>
       <p>
         <span class="skills-category">Work Attitude &amp; Soft Skills:</span>
-        <span class="highlight-green">Extreme Task Ownership &amp; Accountability</span>, 
-        <span class="highlight-green">Cross-Functional Team Leadership</span>, 
-        <span class="highlight-green">Cross-Team Communication &amp; Stakeholder Alignment</span>, 
-        <span class="highlight-green">Crisis Management &amp; Fast Incident Resolution</span>, 
-        <span class="highlight-green">High-Pressure Execution &amp; Strict Deadline Delivery</span>.
+        <span class="bold-emphasis">Extreme Task Ownership &amp; Accountability</span>, 
+        <span class="bold-emphasis">Cross-Functional Team Leadership</span>, 
+        <span class="bold-emphasis">Cross-Team Communication &amp; Stakeholder Alignment</span>, 
+        <span class="bold-emphasis">Crisis Management &amp; Fast Incident Resolution</span>, 
+        <span class="bold-emphasis">High-Pressure Execution &amp; Strict Deadline Delivery</span>.
       </p>
     </div>
 
@@ -294,10 +287,10 @@
         <div class="entry-meta">April 2025 – Present</div>
       </div>
       <ul class="bullet-list">
-        <li><strong>End-to-End Ownership &amp; GTM Launch:</strong> Reported directly to the founder with 100% ownership over digital brand strategy, creative production, and channel distribution. Took full charge from day one—deciding what content to build, designing graphics and filming videos, scheduling distribution, and <span class="highlight-green">reactivating a 1-year dormant account</span> to capture the brand's <span class="highlight-green">first online paying customers</span>.</li>
-        <li><strong>Inbound Lead Acquisition &amp; Paid Conversion:</strong> Built <span class="highlight-green">zero-budget organic acquisition</span> funnels across Instagram and TikTok, scaling inbound lead volume from <span class="highlight-green">0 to 520+ qualified customer inquiries</span> and directly closing <span class="highlight-green">250+ paid commercial transactions</span> within a year.</li>
-        <li><strong>Competitive Intelligence &amp; Positioning:</strong> Executed comprehensive competitive audits against local food and retail brands, identifying underserved market niches and rewriting brand messaging. Conducted on-page SEO audits that elevated profile search visibility and drove a <span class="highlight-green">50% increase in social engagement</span> across 3 accounts within 5 months.</li>
-        <li><strong>High-Pressure Campaign Delivery:</strong> Spearheaded the end-to-end marketing campaign for the annual Christmas Menu launch, coordinating rapid multi-format asset creation under tight deadlines and contributing <span class="highlight-green">50% of total seasonal sales revenue</span>.</li>
+        <li><strong>End-to-End Ownership &amp; GTM Launch:</strong> Reported directly to the founder with 100% ownership over digital brand strategy, creative production, and channel distribution. Took full charge from day one—deciding what content to build, designing graphics and filming videos, scheduling distribution, and <span class="bold-emphasis">reactivating a 1-year dormant account</span> to capture the brand's <span class="bold-emphasis">first online paying customers</span>.</li>
+        <li><strong>Inbound Lead Acquisition &amp; Paid Conversion:</strong> Built <span class="bold-emphasis">zero-budget organic acquisition</span> funnels across Instagram and TikTok, scaling inbound lead volume from <span class="bold-emphasis">0 to 520+ qualified customer inquiries</span> and directly closing <span class="bold-emphasis">250+ paid commercial transactions</span> within a year.</li>
+        <li><strong>Competitive Intelligence &amp; Positioning:</strong> Executed comprehensive competitive audits against local food and retail brands, identifying underserved market niches and rewriting brand messaging. Conducted on-page SEO audits that elevated profile search visibility and drove a <span class="bold-emphasis">50% increase in social engagement</span> across 3 accounts within 5 months.</li>
+        <li><strong>High-Pressure Campaign Delivery:</strong> Spearheaded the end-to-end marketing campaign for the annual Christmas Menu launch, coordinating rapid multi-format asset creation under tight deadlines and contributing <span class="bold-emphasis">50% of total seasonal sales revenue</span>.</li>
       </ul>
     </div>
 
@@ -310,8 +303,8 @@
         <div class="entry-meta">February 2023 – January 2026</div>
       </div>
       <ul class="bullet-list">
-        <li><strong>GTM Product Launches &amp; Revenue Expansion:</strong> Served as core marketing strategist for the campus-wide "Marathon Revision Class" series (Editions 1.0, 2.0, and 3.0), designing multi-channel broadcast funnels and sales conversion copy that reached <span class="highlight-green">500+ tertiary students</span> and produced a <span class="highlight-green">30% direct increase in program revenue</span>.</li>
-        <li><strong>Sales Enablement &amp; Whitepaper Documentation:</strong> Researched and authored structured technical documentation, academic revision guides, and operational whitepapers distributed to <span class="highlight-green">200+ students</span>, equipping instructors with standardized sales and teaching collateral that drove a <span class="highlight-green">60% improvement in student pass rates</span>.</li>
+        <li><strong>GTM Product Launches &amp; Revenue Expansion:</strong> Served as core marketing strategist for the campus-wide "Marathon Revision Class" series (Editions 1.0, 2.0, and 3.0), designing multi-channel broadcast funnels and sales conversion copy that reached <span class="bold-emphasis">500+ tertiary students</span> and produced a <span class="bold-emphasis">30% direct increase in program revenue</span>.</li>
+        <li><strong>Sales Enablement &amp; Whitepaper Documentation:</strong> Researched and authored structured technical documentation, academic revision guides, and operational whitepapers distributed to <span class="bold-emphasis">200+ students</span>, equipping instructors with standardized sales and teaching collateral that drove a <span class="bold-emphasis">60% improvement in student pass rates</span>.</li>
         <li><strong>Customer Feature Alerting &amp; Lifecycle Campaigns:</strong> Conceived, launched, and coordinated "21 Days of Examspiration"—a structured daily content and alert campaign designed to introduce students to platform study frameworks and maintain daily active engagement across the semester exam cycle.</li>
         <li><strong>Cross-Functional Collaboration &amp; Creative Direction:</strong> Directed content operations by briefing and coordinating graphic designers and video editors, ensuring all promotional carousels, video scripts, and announcements adhered to strict brand typography (Lora) and messaging hierarchies.</li>
         <li><strong>Crisis Management &amp; Rapid Comms Resolution:</strong> Managed real-time broadcast communications, attendee inquiries, and scheduling contingencies during live seminar deliveries, resolving technical broadcast friction within minutes to maintain seamless event continuity.</li>
@@ -344,8 +337,8 @@
         <div class="entry-meta">2025</div>
       </div>
       <ul class="bullet-list">
-        <li><strong>Cross-Functional Leadership:</strong> Directed a <span class="highlight-green">17-member cross-functional student committee</span> across 5 operational divisions: Publicity &amp; Marketing, Speaker Engagement, Technical Infrastructure, Registration &amp; Documentation, and Seminar Coordination.</li>
-        <li><strong>Crisis Management &amp; High-Pressure Delivery:</strong> Enforced strict dry-run schedules and crisis-management contingency protocols, delivering a flawless virtual technical leadership seminar for 30 tertiary scholars across multiple universities with zero downtime and achieving a <span class="highlight-green">100% attendee satisfaction score</span>.</li>
+        <li><strong>Cross-Functional Leadership:</strong> Directed a <span class="bold-emphasis">17-member cross-functional student committee</span> across 5 operational divisions: Publicity &amp; Marketing, Speaker Engagement, Technical Infrastructure, Registration &amp; Documentation, and Seminar Coordination.</li>
+        <li><strong>Crisis Management &amp; High-Pressure Delivery:</strong> Enforced strict dry-run schedules and crisis-management contingency protocols, delivering a flawless virtual technical leadership seminar for 30 tertiary scholars across multiple universities with zero downtime and achieving a <span class="bold-emphasis">100% attendee satisfaction score</span>.</li>
         <li><strong>Executive Documentation &amp; Playbook:</strong> Compiled comprehensive post-event whitepapers, operational reports, and survey analysis for Foundation executives, establishing a reusable playbook for future student initiatives.</li>
       </ul>
     </div>
@@ -359,7 +352,7 @@
         <div class="entry-meta">2025</div>
       </div>
       <ul class="bullet-list">
-        <li><strong>End-to-End Program Launch:</strong> Conceived, marketed, and hosted an intensive 2-day technical seminar for <span class="highlight-green">77 penultimate-year engineering undergraduates</span>, achieving a <span class="highlight-green">95%+ attendance retention rate</span> across both days through targeted WhatsApp and direct outreach funnels.</li>
+        <li><strong>End-to-End Program Launch:</strong> Conceived, marketed, and hosted an intensive 2-day technical seminar for <span class="bold-emphasis">77 penultimate-year engineering undergraduates</span>, achieving a <span class="bold-emphasis">95%+ attendance retention rate</span> across both days through targeted WhatsApp and direct outreach funnels.</li>
         <li><strong>Readiness Whitepapers &amp; Evaluation Rubrics:</strong> Researched and authored defense preparation frameworks, project evaluation rubrics, and internship readiness whitepapers to empower engineering candidates facing high-stakes academic defenses.</li>
       </ul>
     </div>
@@ -373,7 +366,7 @@
         <div class="entry-meta">June 2023 – Present</div>
       </div>
       <ul class="bullet-list">
-        <li><strong>Cohort Leadership &amp; Stakeholder Alignment:</strong> Served as the elected communication bridge and operational leader for <span class="highlight-green">43 Mechatronics Engineering undergraduates</span>, managing direct relations with faculty heads and department lecturers.</li>
+        <li><strong>Cohort Leadership &amp; Stakeholder Alignment:</strong> Served as the elected communication bridge and operational leader for <span class="bold-emphasis">43 Mechatronics Engineering undergraduates</span>, managing direct relations with faculty heads and department lecturers.</li>
         <li><strong>Conflict Resolution &amp; Crisis Management:</strong> Coordinated high-stress lecture schedules, laboratory access, and workshop practicals under tight academic deadlines, resolving student-faculty friction with 100% academic alignment.</li>
       </ul>
     </div>
@@ -387,7 +380,7 @@
         <div class="entry-meta">August 2023 – January 2025</div>
       </div>
       <ul class="bullet-list">
-        <li><strong>Technical Engagement &amp; Workshop Turnout:</strong> Moderated technical discussions and community engagement around Robotics, Machine Learning, and 3D Mechanical Modeling, consistently driving <span class="highlight-green">50+ active contributions per session</span> and increasing turnout at physical tech workshops by <span class="highlight-green">20%</span>.</li>
+        <li><strong>Technical Engagement &amp; Workshop Turnout:</strong> Moderated technical discussions and community engagement around Robotics, Machine Learning, and 3D Mechanical Modeling, consistently driving <span class="bold-emphasis">50+ active contributions per session</span> and increasing turnout at physical tech workshops by <span class="bold-emphasis">20%</span>.</li>
       </ul>
     </div>
 
@@ -397,7 +390,7 @@
       <li><strong>Mt Babs Foundation Merit Scholarship Award:</strong> Highly competitive undergraduate scholarship awarded to high-performing leaders (April 2025 &amp; July 2024).</li>
       <li><strong>Certificate of Excellence in Engineering Oratory:</strong> Recognized for outstanding technical presentation and public speaking.</li>
       <li><strong>Most Social Volunteer Award (2023/2024):</strong> Awarded by BootClass for exemplary leadership and community impact.</li>
-      <li><strong>Verified Portfolio &amp; Credentials:</strong> <a href="https://bit.ly/Adediwuracertificates" target="_blank" style="color: var(--emerald); font-weight: 700;">https://bit.ly/Adediwuracertificates</a></li>
+      <li><strong>Verified Portfolio &amp; Credentials:</strong> <a href="https://bit.ly/Adediwuracertificates" target="_blank" style="color: #000000; font-weight: 700;">https://bit.ly/Adediwuracertificates</a></li>
     </ul>
 
   </div>
