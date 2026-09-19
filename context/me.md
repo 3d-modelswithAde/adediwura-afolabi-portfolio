@@ -1,6 +1,7 @@
 # About Me
 
 - **Name:** Adediwura Afolabi
+- **Email / Google Account:** adediwura.ainaafolabi@gmail.com
 - **Role:** Social Media Manager transitioning to AI Product Marketing Manager (AI PMM)
 - **Timezone:** West Africa Time (WAT / UTC+1)
 - **Mission:** I build workflows that help businesses generate revenue with less human input and grow their product.
