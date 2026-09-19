@@ -38,5 +38,7 @@ This sounds like what you do or like to achieve?
 
 ## Next Workstreams
 1. Update LinkedIn profile live with headline and combined about section.
-2. Publish and pin the LinkedIn origin story post.
-3. Begin community networking with Senior PMMs using `.claude/skills/linkedin-pmm-outreach/`.
+2. Publish and pin the LinkedIn origin story post (ready in `profile-strategy-and-copy.md` §7).
+3. Design and upload LinkedIn banner following the layout architecture (Section 6 & `context/linkedin /image (1).png`).
+4. Begin community networking with Senior PMMs using `.claude/skills/linkedin-pmm-outreach/`.
+
